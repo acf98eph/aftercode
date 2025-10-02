@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aftercode | About</title>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="demo-banner" role="status">Aftercode is in Demo Mode — Preview Only</div>
+    <header>
+        <div class="brand">Aftercode</div>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="labs.html">Labs</a></li>
+                <li><a href="about.html" class="active" aria-current="page">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="global-search">
+        <form class="search-form" data-search-form data-demo-disabled>
+            <input type="search" placeholder="Search Aftercode - try &quot;Austin&quot;, &quot;tech stack&quot;, &quot;automation&quot;" aria-label="Search about page" data-search-input>
+            <button type="submit" class="btn btn-secondary">Search</button>
+        </form>
+        <div class="search-suggestions" data-search-suggestions role="listbox" aria-label="Search suggestions"></div>
+        <p class="search-feedback" data-search-feedback></p>
+    </div>
+
+    <main class="page-main">
+        <section class="hero page-hero" aria-labelledby="about-title">
+            <h1 id="about-title" class="hero-title">About Me</h1>
+            <p class="tagline">Inside Aftercode&apos;s Signal</p>
+        </section>
+
+        <section id="about-story" class="about-story" aria-label="Aftercode Story" data-search-target data-search-terms="austin franklin about aftercode services automation ai">
+            <p>Aftercode is the lab where I, Austin Franklin, channel a love for bold interfaces, fast systems, and practical automation into assets you can deploy today. I build with a neon edge because I believe tech should feel alive, not generic.</p>
+            <p>From custom websites and launch-ready landing pages to AI utilities and workflow scripts, everything here is engineered to make creators and startups move quicker. Need a custom PC or hardware plan? I build those too, tuned for sustained performance and minimal downtime.</p>
+            <p>Whether we&apos;re talking design, code, or silicon, Aftercode keeps the stack modern, maintainable, and ready to scale with you.</p>
+        </section>
+
+        <section id="tech-stack" class="tech-stack" aria-labelledby="tech-stack-title" data-search-target data-search-terms="tech stack html css javascript electron github ai automation pc hardware">
+            <h2 id="tech-stack-title">Tech Stack</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Electron</li>
+                <li>GitHub</li>
+                <li>AI / Automation</li>
+                <li>PC Hardware</li>
+            </ul>
+        </section>
+
+        <div id="about-cta" class="section-cta" data-search-target data-search-terms="services learn more contact">
+            <a class="btn btn-secondary" href="services.html">Learn More</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aftercode. All rights reserved.</p>
+    </footer>
+    <div class="demo-modal" id="demo-modal" role="alertdialog" aria-modal="true" aria-labelledby="demo-modal-title" hidden>
+        <div class="demo-modal__dialog">
+            <h2 id="demo-modal-title" class="demo-modal__title">Aftercode Demo Mode</h2>
+            <p class="demo-modal__message" data-demo-message>Demo Mode — Feature Disabled</p>
+            <div class="demo-modal__actions">
+                <button type="button" class="btn btn-secondary" data-demo-dismiss>Close</button>
+            </div>
+        </div>
+    </div>
+    <script src="main.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+

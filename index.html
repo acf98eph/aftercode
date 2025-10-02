@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aftercode</title>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="demo-banner" role="status">Aftercode is in Demo Mode — Preview Only</div>
+    <header>
+        <div class="brand">Aftercode</div>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="labs.html">Labs</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-main">
+        <section id="home-hero" class="hero" aria-labelledby="aftercode-title">
+            <div class="hero-content">
+                <h1 id="aftercode-title" class="hero-title">Aftercode — Building Websites, Apps, and Tools</h1>
+                <p class="hero-subtitle">From custom websites to advanced software, I create solutions you can use.</p>
+                <a class="btn btn-primary" href="services.html">Explore Services</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-cta">
+            <p>Ready to get started? <span>&rarr; Contact Me.</span></p>
+            <a class="btn btn-primary" href="contact.html">Contact Me</a>
+        </div>
+        <p>&copy; 2025 Aftercode. All rights reserved.</p>
+    </footer>
+
+    <div class="demo-modal" id="demo-modal" role="alertdialog" aria-modal="true" aria-labelledby="demo-modal-title" hidden>
+        <div class="demo-modal__dialog">
+            <h2 id="demo-modal-title" class="demo-modal__title">Aftercode Demo Mode</h2>
+            <p class="demo-modal__message" data-demo-message>Demo Mode — Feature Disabled</p>
+            <div class="demo-modal__actions">
+                <button type="button" class="btn btn-secondary" data-demo-dismiss>Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js" defer></script>
+</body>
+</html>
+

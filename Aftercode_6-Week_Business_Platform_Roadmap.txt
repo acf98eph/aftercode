@@ -1,0 +1,63 @@
+Aftercode — 6-Week Business Platform Roadmap
+Updated on September 30, 2025
+
+Goal: Expand Aftercode from a freelancer hub into a full-fledged business platform. This includes services, projects, labs, blog, case studies, a digital storefront, and long-term client workflows.
+
+Weeks 1–2 — Foundation & Professional Hub
+- Build and unify all core pages (Home, Services, Projects, Labs, About, Contact).
+- Style site consistently with neon dark theme; responsive across devices.
+- Expand Services into structured catalog (Web, IT, AI, Branding, PCs).
+- Expand Projects into demo gallery with case study links.
+- Expand Labs into software tools, PC builds, digital products, guides.
+- Add About + Contact with real content (email + phone, Formspree form).
+- Add filtering/search for Services + Projects.
+- Add case-study.html template; link from Projects.
+- Add process.html (How We Work) page; link in navbar.
+- Add Testimonials section (Home + Services).
+- Create blog.html + blog-post.html template; link in navbar.
+- Upgrade global search to index all content (Services, Projects, Labs, Blog).
+
+Weeks 3–4 — Expansion & Authority
+- Fill Services with detailed descriptions and pricing placeholders.
+- Add 5–6 case studies with screenshots and challenge/solution/results format.
+- Publish 5+ blog posts (website tips, resume mistakes, AI tools, PC builds, SEO basics).
+- Add FAQs + placeholder testimonials (replace with real later).
+- SEO optimization: meta tags, titles, Open Graph, compressed images.
+- Mobile QA and accessibility checks.
+- Integrate 'Learn More' expandable explanations across Services/Labs/Projects.
+- Create 'Full Details' pages for each major service (link from Learn More).
+- Begin Labs tool development (e.g., Photo Finder, File Organizer).
+- Plan storefront layout (Shop page with categories: Templates, Tools, Digital Packs).
+
+Weeks 5–6 — Platform Features & Launch Prep
+- Add Storefront (Shop page) with placeholder digital products + Buy buttons.
+- Integrate Gumroad/Payhip or Stripe Payment Links for product sales.
+- Polish Labs apps into downloadable demos; host on GitHub or Gumroad.
+- Add proposal templates + canned Q&A for service requests.
+- Build client intake form (multi-step form for quotes/projects).
+- Add newsletter signup (ConvertKit/Mailchimp free tier).
+- Connect domain (aftercode.dev); test deployment on Vercel/Netlify.
+- Social setup: LinkedIn profile + teaser posts + project shares.
+- Fiverr listings: 5–7 gigs linked to Aftercode (Websites, Branding, IT Support, Resume Optimization, PC Builds, AI Automation).
+- Final QA checklist — test forms, payments, downloads, responsiveness.
+- Soft launch with first Fiverr gigs live and site link in all profiles.
+
+Daily Workflow Split
+Laptop:
+- Code and test Aftercode pages.
+- Push to GitHub and deploy demos.
+- Package/test Electron or web apps.
+- Add/store digital product files.
+- Polish SEO, responsiveness, content uploads.
+iPhone:
+- Save design + inspiration screenshots.
+- Draft copy for Services, FAQs, blog posts.
+- Draft Fiverr gig descriptions + social posts.
+- Collect domain ideas, track pricing/product notes.
+
+Overlap with Physical Work (Lakeshore / On-Site Opportunities)
+- IT/Networking setup + troubleshooting.
+- Automating data entry, inventory tracking, or reporting with scripts.
+- Building small internal tools (dashboards, scheduling apps).
+- Improving warehouse efficiency with utilities.
+- Position yourself as hybrid value: physical + digital problem solver.

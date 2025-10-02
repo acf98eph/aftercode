@@ -1,0 +1,416 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aftercode | Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="demo-banner" role="status">Aftercode is in Demo Mode — Preview Only</div>
+    <header>
+        <div class="brand">Aftercode</div>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active" aria-current="page">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="labs.html">Labs</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="global-search">
+        <form class="search-form" data-search-form data-demo-disabled>
+            <input type="search" placeholder="Search services - try &quot;PC builds&quot;, &quot;AI automation&quot;, &quot;resume&quot;" aria-label="Search services" data-search-input>
+            <button type="submit" class="btn btn-secondary">Search</button>
+        </form>
+        <div class="search-suggestions" data-search-suggestions role="listbox" aria-label="Search suggestions"></div>
+        <p class="search-feedback" data-search-feedback></p>
+    </div>
+
+    <main class="page-main">
+        <section class="hero page-hero" aria-labelledby="services-title">
+            <h1 id="services-title" class="hero-title">Services</h1>
+            <p class="tagline">What I Can Build For You</p>
+        </section>
+
+        <section class="service-catalog" aria-label="Aftercode Service Catalog">
+            <div class="catalog-intro">
+                <h2 class="catalog-title">Service Catalog</h2>
+                <p class="catalog-blurb">Pick a lane and I will wire it for speed. Each category expands to show the core offerings and how we launch them with neon precision.</p>
+            </div>
+
+            <div class="accordion" role="list">
+                <details class="accordion-item" open>
+                    <summary class="accordion-summary">
+                        <div class="accordion-header">
+                            <h3>Web &amp; App Development</h3>
+                            <p>High-impact experiences for creators, startups, and teams that need a presence that hits hard.</p>
+                        </div>
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="subservice-grid">
+                            <article id="custom-websites" class="subservice-card" data-expandable data-search-target data-search-terms="custom websites web development brand design marketing">
+                                <div class="subservice-summary">
+                                    <h4>Custom Websites</h4>
+                                    <p>Tailored marketing and content sites with conversion-ready flows, animation hooks, and performance budgets.</p>
+                                </div>
+                                <div class="subservice-actions">
+                                    <button type="button" class="btn btn-secondary learn-more-btn" data-learn-more aria-expanded="false">Learn More</button>
+                                </div>
+                                <div class="subservice-details" data-expandable-content hidden>
+                                    <p>We start with a strategy session, map information architecture, then prototype in the browser so every section feels intentional. Launch includes analytics wiring, accessibility checks, and fast hosting handoff.</p>
+                                    <div class="service-demo" aria-live="polite">
+                                        <div class="demo-controls">
+                                            <label for="demo-keywords">Keywords</label>
+                                            <div class="demo-input-row">
+                                                <input type="text" id="demo-keywords" name="demo-keywords" placeholder="e.g. Hispanic food or Photography">
+                                                <button type="button" class="btn btn-secondary" id="demo-generate">Generate Preview</button>
+                                            </div>
+                                        </div>
+                                        <div class="demo-preview" id="demo-preview">
+                                            <h3 class="demo-heading">Neon Launchpad</h3>
+                                            <div class="demo-card" data-accent="pulse">
+                                                <div class="demo-image" role="presentation"></div>
+                                                <p class="demo-description">Bold hero layout with call-to-action, product grid, and electrified testimonials to showcase your brand.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="details-link" href="custom-websites.html">Full Details</a>
+                                </div>
+                            </article>
+                            <article id="landing-pages" class="subservice-card" data-expandable data-search-target data-search-terms="landing pages funnels conversion campaigns">
+                                <div class="subservice-summary">
+                                    <h4>Landing Pages</h4>
+                                    <p>Launch-week pages built to capture leads, validate products, and support paid campaigns.</p>
+                                </div>
+                                <div class="subservice-actions">
+                                    <button type="button" class="btn btn-secondary learn-more-btn" data-learn-more aria-expanded="false">Learn More</button>
+                                </div>
+                                <div class="subservice-details" data-expandable-content hidden>
+                                    <p>We create a focused message hierarchy, wire rapid A/B components, and plug in analytics so you can iterate fast. Delivery includes copy revisions, CMS training, and go-live checklist.</p>
+                                    <a class="details-link" href="landing-pages.html">Full Details</a>
+                                </div>
+                            </article>
+                            <article id="ecommerce-sites" class="subservice-card" data-expandable data-search-target data-search-terms="e-commerce storefront shop checkout">
+                                <div class="subservice-summary">
+                                    <h4>E-commerce Sites</h4>
+                                    <p>Secure storefronts with streamlined checkout flows, inventory management, and promo modules.</p>
+                                </div>
+                                <div class="subservice-actions">
+                                    <button type="button" class="btn btn-secondary learn-more-btn" data-learn-more aria-expanded="false">Learn More</button>
+                                </div>
+                                <div class="subservice-details" data-expandable-content hidden>
+                                    <p>We evaluate platforms, integrate payment gateways, and map upsell sequences to boost average order value. Expect documentation, staff training, and optional fulfillment automations.</p>
+                                    <a class="details-link" href="ecommerce-sites.html">Full Details</a>
+                                </div>
+                            </article>
+                            <article id="mobile-apps" class="subservice-card" data-expandable data-search-target data-search-terms="mobile apps pwa progressive web app">
+                                <div class="subservice-summary">
+                                    <h4>Mobile Apps</h4>
+                                    <p>Cross-platform apps and PWAs with offline support, push notifications, and API integrations.</p>
+                                </div>
+                                <div class="subservice-actions">
+                                    <button type="button" class="btn btn-secondary learn-more-btn" data-learn-more aria-expanded="false">Learn More</button>
+                                </div>
+                                <div class="subservice-details" data-expandable-content hidden>
+                                    <p>We design user journeys, build reusable components, and stand up CI pipelines so updates are painless. Post-launch support covers telemetry, store submissions, and versioning strategy.</p>
+                                    <a class="details-link" href="mobile-apps.html">Full Details</a>
+                                </div>
+                            </article>
+                        </div>
+                        <a class="btn btn-primary" href="contact.html">Request Service</a>
+                    </div>
+                </details>
+
+                <details class="accordion-item">
+                    <summary class="accordion-summary">
+                        <div class="accordion-header">
+                            <h3>IT &amp; Networking</h3>
+                            <p>Keep your systems online, secure, and tuned so you can ship without downtime.</p>
+                        </div>
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="subservice-grid">
+                            <article id="wifi-setup" class="subservice-card" data-expandable data-search-target data-search-terms="wi-fi wifi setup networking mesh">
+                                <div class="subservice-summary">
+                                    <h4>Wi-Fi Setup</h4>
+                                    <p>Site surveys, mesh configuration, and QoS tuning for reliable coverage across your space.</p>
+                                </div>
+                                <div class="subservice-actions">
+                                    <button type="button" class="btn btn-secondary learn-more-btn" data-learn-more aria-expanded="false">Learn More</button>
+                                </div>
+                                <div class="subservice-details" data-expandable-content hidden>
+                                    <p>We audit interference, install secure SSIDs, and document optimal placements so scaling is simple. Ongoing monitoring packages are available for proactive alerts.</p>
+                                    <a class="details-link" href="wifi-setup.html">Full Details</a>
+                                </div>
+                            </article>
+                            <article id="network-as-a-service" class="subservice-card" data-expandable data-search-target data-search-terms="network as a service naas monitoring">
+                                <div class="subservice-summary">
+                                    <h4>Network as a Service</h4>
+                                    <p>Managed networking with remote monitoring, firmware updates, and capacity planning.</p>
+                                </div>
+                                <div class="subservice-actions">
+                                    <button type="button" class="btn btn-secondary learn-more-btn" data-learn-more aria-expanded="false">Learn More</button>
+                                </div>
+                                <div class="subservice-details" data-expandable-content hidden>
+                                    <p>Subscribers receive automated health reports, SLA-driven response times, and quarterly scaling reviews. Hardware refresh options keep you ahead of bottlenecks.</p>
+                                    <a class="details-link" href="network-as-a-service.html">Full Details</a>
+                                </div>
+                            </article>
+                            <article id="cybersecurity-basics" class="subservice-card" data-expandable data-search-target data-search-terms="cybersecurity backups training incident response">
+                                <div class="subservice-summary">
+                                    <h4>Cybersecurity Basics</h4>
+                                    <p>Baseline hardening, backup strategy, and response drills tailored to small teams.</p>
+                                </div>
+                                <div class="subservice-actions">
+                                    <button type="button" class="btn btn-secondary learn-more-btn" data-learn-more aria-expanded="false">Learn More</button>
+                                </div>
+                                <div class="subservice-details" data-expandable-content hidden>
+                                    <p>We deploy MFA, password vaults, and backup automations, then run table-top scenarios so everyone knows the playbook. Documentation is delivered for audits and onboarding.</p>
+                                    <a class="details-link" href="cybersecurity-basics.html">Full Details</a>
+                                </div>
+                            </article>
+                            <article id="managed-it-support" class="subservice-card" data-expandable data-search-target data-search-terms="managed it support helpdesk devices patching">
+                                <div class="subservice-summary">
+                                    <h4>Managed IT Support</h4>
+                                    <p>Device onboarding, patch management, and help desk coverage for hybrid teams.</p>
+                                </div>
+                                <div class="subservice-actions">
+                                    <button type="button" class="btn btn-secondary learn-more-btn" data-learn-more aria-expanded="false">Learn More</button>
+                                </div>
+                                <div class="subservice-details" data-expandable-content hidden>
+                                    <p>Support plans include remote remediation, asset tracking, and quarterly tech stack reviews. Optional on-site visits keep critical hardware in peak shape.</p>
+                                    <a class="details-link" href="managed-it-support.html">Full Details</a>
+                                </div>
+                            </article>
+                        </div>
+                        <a class="btn btn-primary" href="contact.html">Request Service</a>
+                    </div>
+                </details>
+
+                <details class="accordion-item">
+                    <summary class="accordion-summary">
+                        <div class="accordion-header">
+                            <h3>AI &amp; Automation</h3>
+                            <p>Automate the grind with workflows, scripts, and AI copilots tuned to your ops.</p>
+                        </div>
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="subservice-grid">
+                            <article id="resume-optimizer-service" class="subservice-card" data-expandable data-search-target data-search-terms="resume optimizer ai branding collaboration">
+                                <div class="subservice-summary">
+                                    <h4>Resume Optimizer</h4>
+                                    <p>AI-assisted rewrites that sharpen your metrics, storytelling, and formatting.</p>
+                                </div>
+                                <div class="subservice-actions">
+                                    <button type="button" class="btn btn-secondary learn-more-btn" data-learn-more aria-expanded="false">Learn More</button>
+                                </div>
+                                <div class="subservice-details" data-expandable-content hidden>
+                                    <p>You upload your resume, we run AI suggestions, then refine together with human edits and keyword tuning. Final delivery includes ATS-friendly formats and LinkedIn-ready copy.</p>
+                                    <a class="details-link" href="resume-optimizer.html">Full Details</a>
+                                </div>
+                            </article>
+                            <article id="chatbot-setup" class="subservice-card" data-expandable data-search-target data-search-terms="chatbot setup support automation help desk">
+                                <div class="subservice-summary">
+                                    <h4>Chatbot Setup</h4>
+                                    <p>Custom knowledge bases and conversational flows for support desks and lead capture.</p>
+                                </div>
+                                <div class="subservice-actions">
+                                    <button type="button" class="btn btn-secondary learn-more-btn" data-learn-more aria-expanded="false">Learn More</button>
+                                </div>
+                                <div class="subservice-details" data-expandable-content hidden>
+                                    <p>We gather FAQs, build guardrails, and connect to your CRM so conversations translate into actions. Monitoring dashboards keep you in control of tone and accuracy.</p>
+                                    <a class="details-link" href="chatbot-setup.html">Full Details</a>
+                                </div>
+                            </article>
+                            <article id="workflow-automation-scripts" class="subservice-card" data-expandable data-search-target data-search-terms="workflow automation scripting integrations zaps">
+                                <div class="subservice-summary">
+                                    <h4>Workflow Automation Scripts</h4>
+                                    <p>Scripts and integrations that pass data between the tools you already live in.</p>
+                                </div>
+                                <div class="subservice-actions">
+                                    <button type="button" class="btn btn-secondary learn-more-btn" data-learn-more aria-expanded="false">Learn More</button>
+                                </div>
+                                <div class="subservice-details" data-expandable-content hidden>
+                                    <p>We audit your process, identify manual choke points, and build secure automations with logging for transparency. Training hand-offs make sure your team can iterate without code.</p>
+                                    <a class="details-link" href="workflow-automation.html">Full Details</a>
+                                </div>
+                            </article>
+                        </div>
+                        <a class="btn btn-primary" href="contact.html">Request Service</a>
+                    </div>
+                </details>
+
+                <details class="accordion-item">
+                    <summary class="accordion-summary">
+                        <div class="accordion-header">
+                            <h3>Branding &amp; Content</h3>
+                            <p>Shape the voice, visuals, and copy that help your message break through the noise.</p>
+                        </div>
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="subservice-grid">
+                            <article id="resume-linkedin-refresh" class="subservice-card" data-expandable data-search-target data-search-terms="resume linkedin refresh personal brand">
+                                <div class="subservice-summary">
+                                    <h4>Resume / LinkedIn Refresh</h4>
+                                    <p>Coaching, copy, and layout updates that align your story across resume and profile.</p>
+                                </div>
+                                <div class="subservice-actions">
+                                    <button type="button" class="btn btn-secondary learn-more-btn" data-learn-more aria-expanded="false">Learn More</button>
+                                </div>
+                                <div class="subservice-details" data-expandable-content hidden>
+                                    <p>We run messaging interviews, rebuild sections with metric-driven highlights, and deliver LinkedIn-ready messaging. Optional templates help you iterate on future roles.</p>
+                                    <a class="details-link" href="resume-linkedin-refresh.html">Full Details</a>
+                                </div>
+                            </article>
+                            <article id="logo-design" class="subservice-card" data-expandable data-search-target data-search-terms="logo design identity brand kit">
+                                <div class="subservice-summary">
+                                    <h4>Logo Design</h4>
+                                    <p>Mark and wordmark explorations that carry across web, merch, and packaging.</p>
+                                </div>
+                                <div class="subservice-actions">
+                                    <button type="button" class="btn btn-secondary learn-more-btn" data-learn-more aria-expanded="false">Learn More</button>
+                                </div>
+                                <div class="subservice-details" data-expandable-content hidden>
+                                    <p>We prototype multiple directions, test legibility in dark and light modes, and deliver export-ready files with usage guidelines. Iteration rounds keep you in the loop.</p>
+                                    <a class="details-link" href="logo-design.html">Full Details</a>
+                                </div>
+                            </article>
+                            <article id="marketing-copy" class="subservice-card" data-expandable data-search-target data-search-terms="marketing copy email launch product">
+                                <div class="subservice-summary">
+                                    <h4>Marketing Copy</h4>
+                                    <p>Launch copy, email sequences, and product messaging built for clarity and punch.</p>
+                                </div>
+                                <div class="subservice-actions">
+                                    <button type="button" class="btn btn-secondary learn-more-btn" data-learn-more aria-expanded="false">Learn More</button>
+                                </div>
+                                <div class="subservice-details" data-expandable-content hidden>
+                                    <p>We define a voice profile, craft headlines and body copy, then test variations for different channels. Delivery includes editable docs and guidance on future iterations.</p>
+                                    <a class="details-link" href="marketing-copy.html">Full Details</a>
+                                </div>
+                            </article>
+                            <article id="visual-style-guides" class="subservice-card" data-expandable data-search-target data-search-terms="visual style guide typography palette">
+                                <div class="subservice-summary">
+                                    <h4>Visual Style Guides</h4>
+                                    <p>Typographic scale, color palettes, and usage rules to keep your brand consistent.</p>
+                                </div>
+                                <div class="subservice-actions">
+                                    <button type="button" class="btn btn-secondary learn-more-btn" data-learn-more aria-expanded="false">Learn More</button>
+                                </div>
+                                <div class="subservice-details" data-expandable-content hidden>
+                                    <p>We audit existing assets, build token systems for web and print, and package guidance for your team or partners. Templates ensure future content ships on-brand.</p>
+                                    <a class="details-link" href="visual-style-guides.html">Full Details</a>
+                                </div>
+                            </article>
+                        </div>
+                        <a class="btn btn-primary" href="contact.html">Request Service</a>
+                    </div>
+                </details>
+
+                <details class="accordion-item">
+                    <summary class="accordion-summary">
+                        <div class="accordion-header">
+                            <h3>Custom PCs &amp; Hardware</h3>
+                            <p>From first boot to performance tuning, we build rigs that match your workflow.</p>
+                        </div>
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="accordion-content">
+                        <div class="subservice-grid">
+                            <article id="pc-builds-service" class="subservice-card" data-expandable data-search-target data-search-terms="pc builds workstation gaming creator rigs">
+                                <div class="subservice-summary">
+                                    <h4>PC Builds</h4>
+                                    <p>Custom part lists and assembly for gaming, creative, and development workloads.</p>
+                                </div>
+                                <div class="subservice-actions">
+                                    <button type="button" class="btn btn-secondary learn-more-btn" data-learn-more aria-expanded="false">Learn More</button>
+                                </div>
+                                <div class="subservice-details" data-expandable-content hidden>
+                                    <p>We walk through requirement gathering, source vetted components, and handle clean assembly with cable management. Each build ships after burn-in testing and documentation.</p>
+                                    <a class="details-link" href="pc-builds.html">Full Details</a>
+                                </div>
+                            </article>
+                            <article id="performance-tuning" class="subservice-card" data-expandable data-search-target data-search-terms="performance tuning overclock thermals">
+                                <div class="subservice-summary">
+                                    <h4>Performance Tuning</h4>
+                                    <p>Thermal balancing, BIOS optimization, and overclock profiles for stable gains.</p>
+                                </div>
+                                <div class="subservice-actions">
+                                    <button type="button" class="btn btn-secondary learn-more-btn" data-learn-more aria-expanded="false">Learn More</button>
+                                </div>
+                                <div class="subservice-details" data-expandable-content hidden>
+                                    <p>We profile workloads, adjust BIOS and fan curves, then run stress suites to confirm headroom. Clients receive tuning reports and rollback profiles for safety.</p>
+                                    <a class="details-link" href="performance-tuning.html">Full Details</a>
+                                </div>
+                            </article>
+                            <article id="hardware-consulting-service" class="subservice-card" data-expandable data-search-target data-search-terms="hardware consulting upgrades planning">
+                                <div class="subservice-summary">
+                                    <h4>Hardware Consulting</h4>
+                                    <p>Upgrade roadmaps, compatibility checks, and procurement support for your stack.</p>
+                                </div>
+                                <div class="subservice-actions">
+                                    <button type="button" class="btn btn-secondary learn-more-btn" data-learn-more aria-expanded="false">Learn More</button>
+                                </div>
+                                <div class="subservice-details" data-expandable-content hidden>
+                                    <p>We audit current rigs, advise on component sequencing, and manage vendor outreach when needed. Expect detailed BOMs and budget options.</p>
+                                    <a class="details-link" href="hardware-consulting.html">Full Details</a>
+                                </div>
+                            </article>
+                            <article id="maintenance-plans" class="subservice-card" data-expandable data-search-target data-search-terms="maintenance plans cleaning support">
+                                <div class="subservice-summary">
+                                    <h4>Maintenance Plans</h4>
+                                    <p>Scheduled cleanings, firmware updates, and health reports to keep builds sharp.</p>
+                                </div>
+                                <div class="subservice-actions">
+                                    <button type="button" class="btn btn-secondary learn-more-btn" data-learn-more aria-expanded="false">Learn More</button>
+                                </div>
+                                <div class="subservice-details" data-expandable-content hidden>
+                                    <p>We set quarterly checkpoints, refresh thermal paste when needed, and verify backups so you stay online. Remote monitoring options catch issues before they escalate.</p>
+                                    <a class="details-link" href="maintenance-plans.html">Full Details</a>
+                                </div>
+                            </article>
+                        </div>
+                        <a class="btn btn-primary" href="contact.html">Request Service</a>
+                    </div>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aftercode. All rights reserved.</p>
+    </footer>
+    <div class="demo-modal" id="demo-modal" role="alertdialog" aria-modal="true" aria-labelledby="demo-modal-title" hidden>
+        <div class="demo-modal__dialog">
+            <h2 id="demo-modal-title" class="demo-modal__title">Aftercode Demo Mode</h2>
+            <p class="demo-modal__message" data-demo-message>Demo Mode — Feature Disabled</p>
+            <div class="demo-modal__actions">
+                <button type="button" class="btn btn-secondary" data-demo-dismiss>Close</button>
+            </div>
+        </div>
+    </div>
+    <script src="main.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
