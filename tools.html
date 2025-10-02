@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aftercode | Tools</title>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="demo-banner" role="status">Aftercode is in Demo Mode — Preview Only</div>
+    <header>
+        <div class="brand">Aftercode</div>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="tools.html" class="active" aria-current="page">Tools</a></li>
+                <li><a href="labs.html">Labs</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-main tools-main">
+        <section class="hero page-hero" aria-labelledby="tools-title">
+            <div class="hero-content">
+                <h1 id="tools-title" class="hero-title">Tools We Use</h1>
+                <p class="hero-subtitle">A curated stack for building, automating, and scaling.</p>
+            </div>
+        </section>
+
+        <section class="tools-grid" aria-label="Aftercode Tool Stack">
+            <article class="tool-card">
+                <div class="tool-card__header">
+                    <div class="tool-card__logo" aria-hidden="true">DEV</div>
+                    <h2 class="tool-card__title">Development Tools</h2>
+                </div>
+                <p class="tool-card__summary">Editors, repos, and runtimes that keep code shipping fast: VS Code, GitHub, Electron, Node.js.</p>
+                <a class="btn btn-outline" href="https://code.visualstudio.com/" target="_blank" rel="noopener" data-demo-disabled>View Tool Stack</a>
+            </article>
+            <article class="tool-card">
+                <div class="tool-card__header">
+                    <div class="tool-card__logo" aria-hidden="true">AI</div>
+                    <h2 class="tool-card__title">AI Tools</h2>
+                </div>
+                <p class="tool-card__summary">ChatGPT copilots, automation scripts, and prompt systems that extend production bandwidth.</p>
+                <a class="btn btn-outline" href="https://chat.openai.com/" target="_blank" rel="noopener" data-demo-disabled>Explore AI Toolkit</a>
+            </article>
+            <article class="tool-card">
+                <div class="tool-card__header">
+                    <div class="tool-card__logo" aria-hidden="true">MKT</div>
+                    <h2 class="tool-card__title">Marketing Tools</h2>
+                </div>
+                <p class="tool-card__summary">Design, scheduling, and analytics: Canva, Buffer, SEO suites, and lifecycle email automation.</p>
+                <a class="btn btn-outline" href="https://www.canva.com/" target="_blank" rel="noopener" data-demo-disabled>Review Marketing Kit</a>
+            </article>
+            <article class="tool-card">
+                <div class="tool-card__header">
+                    <div class="tool-card__logo" aria-hidden="true">OPS</div>
+                    <h2 class="tool-card__title">Finance &amp; Ops Tools</h2>
+                </div>
+                <p class="tool-card__summary">Run the business with QuickBooks, Google Sheets tracking, and expense intelligence workflows.</p>
+                <a class="btn btn-outline" href="https://quickbooks.intuit.com/" target="_blank" rel="noopener" data-demo-disabled>See Ops Stack</a>
+            </article>
+        </section>
+
+        <section class="section-cta tools-cta" aria-label="Request custom tool stack">
+            <a class="btn btn-primary" href="contact.html" data-demo-disabled>Want a custom stack? &rarr; Request a consult</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-cta">
+            <p>Tools are only the start. <span>&rarr; Contact Me.</span></p>
+            <a class="btn btn-primary" href="contact.html" data-demo-disabled>Contact Me</a>
+        </div>
+        <nav class="footer-links" aria-label="Footer navigation">
+            <ul>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2025 Aftercode. All rights reserved.</p>
+    </footer>
+
+    <div class="demo-modal" id="demo-modal" role="alertdialog" aria-modal="true" aria-labelledby="demo-modal-title" hidden>
+        <div class="demo-modal__dialog">
+            <h2 id="demo-modal-title" class="demo-modal__title">Aftercode Demo Mode</h2>
+            <p class="demo-modal__message" data-demo-message>Demo Mode — Feature Disabled</p>
+            <div class="demo-modal__actions">
+                <button type="button" class="btn btn-secondary" data-demo-dismiss>Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
