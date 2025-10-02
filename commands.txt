@@ -1,17 +1,14 @@
-echo Step 1: Initialize Git if not already
-git init
-
-echo Step 2: Add all files to staging
+echo Step 1: Add all files to staging
 git add .
 
-echo Step 3: Commit changes
+echo Step 2: Commit changes
 git commit -m "Automated website update"
 
-echo Step 4: Make sure branch is main
+echo Step 3: Make sure branch is main
 git branch -M main
 
-echo Step 5: Link to GitHub repo (will error if already linked)
+echo Step 4: Link repo (ignore if it already exists)
 git remote add origin https://github.com/acf98eph/portfolio-website.git
 
-echo Step 6: Push changes to GitHub
+echo Step 5: Push changes to GitHub
 git push -u origin main
