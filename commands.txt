@@ -1,14 +1,19 @@
-echo Step 1: Add all files to staging
+echo ===== Morning Website Update =====
 git add .
-
-echo Step 2: Commit changes
-git commit -m "Automated website update"
-
-echo Step 3: Make sure branch is main
-git branch -M main
-
-echo Step 4: Link repo (ignore if it already exists)
-git remote add origin https://github.com/acf98eph/portfolio-website.git
-
-echo Step 5: Push changes to GitHub
+git commit -m "Morning automated update"
 git push -u origin main
+
+echo ===== Midday Script Run =====
+py runner.py
+
+echo ===== Afternoon Cleanup =====
+mkdir TempCleanup
+echo This is a temp file > TempCleanup\temp1.txt
+echo Another temp file > TempCleanup\temp2.txt
+del /Q TempCleanup\*.*
+
+echo ===== Evening Backup =====
+mkdir Backup
+xcopy "C:\Long Term Goal" "C:\Long Term Goal\Backup" /E /Y
+
+echo ===== Day Complete =====
