@@ -4,7 +4,8 @@ git commit -m "Morning automated update"
 git push -u origin main
 
 echo ===== Midday Script Run =====
-py runner.py
+echo (placeholder for real script later)
+
 
 echo ===== Afternoon Cleanup =====
 mkdir TempCleanup
