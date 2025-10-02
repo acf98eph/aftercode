@@ -1,20 +1,8 @@
-echo ===== Morning Website Update =====
+echo ===== Website Update =====
+
+cd "C:\Long Term Goal"
 git add .
-git commit -m "Morning automated update"
+git commit -m "Automated website update"
 git push -u origin main
 
-echo ===== Midday Script Run =====
-echo (placeholder for real script later)
-
-
-echo ===== Afternoon Cleanup =====
-mkdir TempCleanup
-echo This is a temp file > TempCleanup\temp1.txt
-echo Another temp file > TempCleanup\temp2.txt
-del /Q TempCleanup\*.*
-
-echo ===== Evening Backup =====
-mkdir Backup
-xcopy "C:\Long Term Goal" "C:\Long Term Goal\Backup" /E /Y
-
-echo ===== Day Complete =====
+echo ===== Website Update Complete =====
