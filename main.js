@@ -1,9 +1,9 @@
-ï»¿(function () {
+(function () {
     const SEARCH_HIT_CLASS = 'search-hit';
     const SEARCH_HIDDEN_CLASS = 'search-hidden';
     const SUGGESTION_ACTIVE_CLASS = 'search-suggestion--active';
     const MAX_SUGGESTIONS = 6;
-    const DEMO_MESSAGE_DEFAULT = 'Demo Mode â€” Feature Disabled';
+    const DEMO_MESSAGE_DEFAULT = 'Demo Mode — Feature Disabled';
 
     const SEARCH_INDEX = [
         {
@@ -672,7 +672,7 @@
 
             if (!term.trim()) {
                 clearHighlights();
-                setFeedback('Try keywords like â€œAI toolsâ€, â€œresumeâ€, or â€œcustom PCâ€.');
+                setFeedback('Try keywords like “AI tools”, “resume”, or “custom PC”.');
                 return;
             }
 
@@ -686,7 +686,7 @@
             } else if (matchCount > 0) {
                 setFeedback(`Found ${matchCount} on this page.`);
             } else {
-                setFeedback('No direct matchesâ€”press Enter to jump to the closest result.');
+                setFeedback('No direct matches—press Enter to jump to the closest result.');
             }
         };
 
@@ -752,7 +752,7 @@
         });
 
         renderSuggestions(currentSuggestions);
-        setFeedback('Try keywords like â€œAI toolsâ€, â€œresumeâ€, or â€œcustom PCâ€.');
+        setFeedback('Try keywords like “AI tools”, “resume”, or “custom PC”.');
     }
 
     function initExpandables() {
@@ -820,6 +820,99 @@
         generateBtn.addEventListener('click', updatePreview);
         updatePreview();
     }
+    function initTestimonialCarousel() {
+        const tracks = document.querySelectorAll('.testimonial-track');
+        if (!tracks.length) return;
+
+        const mediaQuery = window.matchMedia('(max-width: 720px)');
+
+        tracks.forEach((track) => {
+            if (track.dataset.carouselBound === 'true') return;
+            track.dataset.carouselBound = 'true';
+
+            const cards = Array.from(track.querySelectorAll('.testimonial-card'));
+            if (cards.length < 2) return;
+
+            track.setAttribute('role', 'list');
+            cards.forEach((card, index) => {
+                card.setAttribute('role', 'listitem');
+                card.setAttribute('aria-label', `Testimonial ${index + 1} of ${cards.length}`);
+            });
+
+            let activeIndex = 0;
+            const scrollToIndex = (index) => {
+                const nextIndex = Math.max(0, Math.min(index, cards.length - 1));
+                activeIndex = nextIndex;
+                const target = cards[nextIndex];
+                if (!target) return;
+                const left = typeof target.offsetLeft === 'number' ? target.offsetLeft : 0;
+                if (typeof track.scrollTo === 'function') {
+                    track.scrollTo({ left, behavior: 'smooth' });
+                } else {
+                    track.scrollLeft = left;
+                }
+            };
+
+            const syncFocusState = () => {
+                if (mediaQuery.matches) {
+                    track.tabIndex = 0;
+                    track.setAttribute('aria-live', 'polite');
+                    track.setAttribute('aria-roledescription', 'carousel');
+                } else {
+                    track.tabIndex = -1;
+                    track.removeAttribute('aria-live');
+                    track.removeAttribute('aria-roledescription');
+                    activeIndex = 0;
+                    if (typeof track.scrollTo === 'function') {
+                        track.scrollTo({ left: 0, behavior: 'auto' });
+                    } else {
+                        track.scrollLeft = 0;
+                    }
+                }
+            };
+
+            track.addEventListener('keydown', (event) => {
+                if (!mediaQuery.matches) return;
+                if (event.key === 'ArrowRight') {
+                    event.preventDefault();
+                    scrollToIndex(activeIndex + 1);
+                } else if (event.key === 'ArrowLeft') {
+                    event.preventDefault();
+                    scrollToIndex(activeIndex - 1);
+                }
+            });
+
+            let scrollTimer = null;
+            track.addEventListener('scroll', () => {
+                if (!mediaQuery.matches) return;
+                if (scrollTimer) {
+                    window.clearTimeout(scrollTimer);
+                }
+                scrollTimer = window.setTimeout(() => {
+                    let closest = activeIndex;
+                    let minDistance = Number.POSITIVE_INFINITY;
+                    cards.forEach((card, cardIndex) => {
+                        const distance = Math.abs(card.offsetLeft - track.scrollLeft);
+                        if (distance < minDistance) {
+                            minDistance = distance;
+                            closest = cardIndex;
+                        }
+                    });
+                    activeIndex = closest;
+                }, 120);
+            }, { passive: true });
+
+            const onChange = () => syncFocusState();
+            if (typeof mediaQuery.addEventListener === 'function') {
+                mediaQuery.addEventListener('change', onChange);
+            } else if (typeof mediaQuery.addListener === 'function') {
+                mediaQuery.addListener(onChange);
+            }
+
+            syncFocusState();
+        });
+    }
+
     function initDemoMode() {
         const modal = document.getElementById('demo-modal');
         if (!modal) return;
@@ -895,9 +988,14 @@
         initDemoMode();
         initSearch();
         initExpandables();
+        initTestimonialCarousel();
         initServiceDemo();
     });
 })();
+
+
+
+
 
 
 

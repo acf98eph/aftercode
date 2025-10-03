@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aftercode | Services</title>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2&ndash;family=Audiowide&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="demo-banner" role="status">Aftercode is in Demo Mode — Preview Only</div>
-    <header>
+        <header>
         <div class="brand">Aftercode</div>
         <nav aria-label="Main Navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="process.html">Process</a></li>
                 <li><a href="services.html" class="active" aria-current="page">Services</a></li>
                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="shop.html">Shop</a></li>
                 <li><a href="tools.html">Tools</a></li>
                 <li><a href="labs.html">Labs</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -385,17 +388,54 @@
                 </details>
             </div>
         </section>
+
+        <section class="testimonials" aria-labelledby="services-testimonials-title">
+            <div class="section-heading">
+                <h2 id="services-testimonials-title" class="section-title">What Clients Say</h2>
+                <p class="section-description">Snapshots from recent engagements covering web builds, automations, and on-call support.</p>
+            </div>
+            <div class="testimonial-track">
+                <article class="testimonial-card">
+                    <div class="testimonial-card__glow" aria-hidden="true"></div>
+                    <p class="testimonial-card__quote">&ldquo;Scope, milestones, and delivery were all transparent. The final site shipped with zero guesswork.&rdquo;</p>
+                    <p class="testimonial-card__author">Jamie Patel &bull; Studio Founder</p>
+                </article>
+                <article class="testimonial-card">
+                    <div class="testimonial-card__glow" aria-hidden="true"></div>
+                    <p class="testimonial-card__quote">&ldquo;Support tickets dropped overnight because our internal tooling finally runs itself.&rdquo;</p>
+                    <p class="testimonial-card__author">Priya Chen &bull; CX Lead</p>
+                </article>
+                <article class="testimonial-card">
+                    <div class="testimonial-card__glow" aria-hidden="true"></div>
+                    <p class="testimonial-card__quote">&ldquo;Aftercode gave us automation plus training, so the team actually uses everything that was built.&rdquo;</p>
+                    <p class="testimonial-card__author">Noah Grant &bull; Product Manager</p>
+                </article>
+            </div>
+            <div class="testimonials-cta">
+                <a class="btn btn-primary" href="contact.html">Your story could be next &rarr;</a>
+            </div>
+        </section>
     </main>
 
-    <footer>
-                <nav class="footer-links" aria-label="Footer navigation">
+        <footer>
+        <div class="footer-cta">
+            <a class="btn btn-fiverr" href="https://www.fiverr.com/s/EgxBkAq" data-demo-disabled data-demo-message="Demo Mode - Feature Disabled.">Work with me on Fiverr</a>
+        </div>
+        <nav class="footer-links" aria-label="Footer navigation">
             <ul>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="process.html">Process</a></li>
+                <li><a href="services.html" aria-current="page">Services</a></li>
                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="shop.html">Shop</a></li>
                 <li><a href="tools.html">Tools</a></li>
+                <li><a href="labs.html">Labs</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <p class="footer-note">Demo Mode &mdash; Updated Automatically via GitHub Pages.</p>
         <p>&copy; 2025 Aftercode. All rights reserved.</p>
     </footer>
     <div class="demo-modal" id="demo-modal" role="alertdialog" aria-modal="true" aria-labelledby="demo-modal-title" hidden>

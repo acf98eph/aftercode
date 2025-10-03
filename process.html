@@ -1,22 +1,20 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aftercode</title>
+    <title>Aftercode | Process</title>
     <link href="https://fonts.googleapis.com/css2&ndash;family=Audiowide&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>Automation test successful!</p>
-
-    <div class="demo-banner" role="status">Aftercode is in Demo Mode — Preview Only</div>
+    <div class="demo-banner" role="status">Aftercode is in Demo Mode - Preview Only</div>
         <header>
         <div class="brand">Aftercode</div>
         <nav aria-label="Main Navigation">
             <ul>
-                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-                <li><a href="process.html">Process</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="process.html" class="active" aria-current="page">Process</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="shop.html">Shop</a></li>
@@ -29,39 +27,43 @@
         </nav>
     </header>
 
-    <main class="home-main">
-        <section id="home-hero" class="hero" aria-labelledby="aftercode-title">
+    <main class="page-main process-page">
+        <section class="hero page-hero process-hero" aria-labelledby="process-title">
             <div class="hero-content">
-                <h1 id="aftercode-title" class="hero-title">Aftercode — Building Websites, Apps, and Tools</h1>
-                <p class="hero-subtitle">From custom websites to advanced software, I create solutions you can use.</p>
-                <a class="btn btn-primary" href="services.html">Explore Services</a>
+                <h1 id="process-title" class="hero-title">How We Work</h1>
+                <p class="hero-subtitle">A proven workflow that keeps projects sharp, transparent, and ready to launch.</p>
             </div>
         </section>
 
-        <section class="testimonials" aria-labelledby="testimonials-title">
+        <section class="process-flow" aria-label="Aftercode 4-step workflow">
             <div class="section-heading">
-                <h2 id="testimonials-title" class="section-title">What Clients Say</h2>
-                <p class="section-description">Feedback from collaborative builds and automation launches in the Aftercode pipeline.</p>
+                <h2 class="section-title">From Idea to Ongoing Support</h2>
+                <p class="section-description">Every engagement follows these core phases so you always know what&apos;s happening and what comes next.</p>
             </div>
-            <div class="testimonial-track">
-                <article class="testimonial-card">
-                    <div class="testimonial-card__glow" aria-hidden="true"></div>
-                    <p class="testimonial-card__quote">&ldquo;Aftercode translated rough notes into a ship-ready product experience &mdash; every milestone hit the timeline.&rdquo;</p>
-                    <p class="testimonial-card__author">Alex Rivera &bull; Launch Director</p>
+            <div class="process-grid">
+                <article class="process-step">
+                    <div class="process-step__icon" aria-hidden="true">01</div>
+                    <h3>Consult</h3>
+                    <p>We unpack your goals, audience, and operating constraints, then outline a plan that solves the real problem.</p>
                 </article>
-                <article class="testimonial-card">
-                    <div class="testimonial-card__glow" aria-hidden="true"></div>
-                    <p class="testimonial-card__quote">&ldquo;Our internal tools finally talk to each other. The automation workflow saved hours every single week.&rdquo;</p>
-                    <p class="testimonial-card__author">Morgan Lee &bull; Operations Lead</p>
+                <article class="process-step">
+                    <div class="process-step__icon" aria-hidden="true">02</div>
+                    <h3>Build</h3>
+                    <p>Design, prototypes, and code come together fast with async updates so you can review progress in real time.</p>
                 </article>
-                <article class="testimonial-card">
-                    <div class="testimonial-card__glow" aria-hidden="true"></div>
-                    <p class="testimonial-card__quote">&ldquo;Design, dev, and launch all in one rhythm. The neon aesthetic is bold but still passes accessibility.&rdquo;</p>
-                    <p class="testimonial-card__author">Jordan Smith &bull; Creative Producer</p>
+                <article class="process-step">
+                    <div class="process-step__icon" aria-hidden="true">03</div>
+                    <h3>Deliver</h3>
+                    <p>We launch with punchy performance, polish accessibility, and package everything so handoff is painless.</p>
+                </article>
+                <article class="process-step">
+                    <div class="process-step__icon" aria-hidden="true">04</div>
+                    <h3>Support</h3>
+                    <p>Post-launch monitoring, updates, and iteration keep the experience fresh while you scale your results.</p>
                 </article>
             </div>
-            <div class="testimonials-cta">
-                <a class="btn btn-primary" href="contact.html">Your story could be next &rarr;</a>
+            <div class="process-cta" role="presentation">
+                <a class="btn btn-primary" href="contact.html">Start Your Project &rarr;</a>
             </div>
         </section>
     </main>
@@ -72,8 +74,8 @@
         </div>
         <nav class="footer-links" aria-label="Footer navigation">
             <ul>
-                <li><a href="index.html" aria-current="page">Home</a></li>
-                <li><a href="process.html">Process</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="process.html" aria-current="page">Process</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="shop.html">Shop</a></li>
@@ -91,7 +93,7 @@
     <div class="demo-modal" id="demo-modal" role="alertdialog" aria-modal="true" aria-labelledby="demo-modal-title" hidden>
         <div class="demo-modal__dialog">
             <h2 id="demo-modal-title" class="demo-modal__title">Aftercode Demo Mode</h2>
-            <p class="demo-modal__message" data-demo-message>Demo Mode — Feature Disabled</p>
+            <p class="demo-modal__message" data-demo-message>Demo Mode - Feature Disabled</p>
             <div class="demo-modal__actions">
                 <button type="button" class="btn btn-secondary" data-demo-dismiss>Close</button>
             </div>
@@ -101,11 +103,3 @@
     <script src="main.js" defer></script>
 </body>
 </html>
-
-
-
-
-
-
-
-

@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aftercode | Labs</title>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2&ndash;family=Audiowide&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="demo-banner" role="status">Aftercode is in Demo Mode — Preview Only</div>
-    <header>
+        <header>
         <div class="brand">Aftercode</div>
         <nav aria-label="Main Navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="process.html">Process</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="shop.html">Shop</a></li>
                 <li><a href="tools.html">Tools</a></li>
                 <li><a href="labs.html" class="active" aria-current="page">Labs</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -37,6 +40,37 @@
         <section class="hero page-hero" aria-labelledby="labs-title">
             <h1 id="labs-title" class="hero-title">Aftercode Labs</h1>
             <p class="tagline">Explore Tools, Programs, and Experiments</p>
+        </section>
+
+
+        <section class="labs-showcase" aria-labelledby="labs-showcase-title">
+            <div class="section-heading">
+                <h2 id="labs-showcase-title" class="section-title">Labs App Showcase</h2>
+                <p class="section-description">Preview three in-progress utilities straight from the Aftercode lab. Demos are locked while we stay in Demo Mode, but you can see what is coming next.</p>
+            </div>
+            <div class="labs-showcase__grid">
+                <article class="labs-app-card">
+                    <div class="labs-app-card__icon" aria-hidden="true">RO</div>
+                    <h3>Resume Optimizer</h3>
+                    <p>Import your resume, benchmark it against job listings, and auto-generate bullet upgrades.</p>
+                    <button class="btn btn-secondary" type="button" data-demo-disabled aria-disabled="true">Launch Demo</button>
+                </article>
+                <article class="labs-app-card">
+                    <div class="labs-app-card__icon" aria-hidden="true">FO</div>
+                    <h3>File Organizer</h3>
+                    <p>Drag, drop, and let smart recipes rename, tag, and sync your production assets.</p>
+                    <button class="btn btn-secondary" type="button" data-demo-disabled aria-disabled="true">Launch Demo</button>
+                </article>
+                <article class="labs-app-card">
+                    <div class="labs-app-card__icon" aria-hidden="true">PF</div>
+                    <h3>Photo Finder</h3>
+                    <p>Search visuals by palette, subject, or mood to source the perfect shot instantly.</p>
+                    <button class="btn btn-secondary" type="button" data-demo-disabled aria-disabled="true">Launch Demo</button>
+                </article>
+            </div>
+            <div class="labs-showcase__cta">
+                <a class="btn btn-primary" href="shop.html">Explore More in Shop &rarr;</a>
+            </div>
         </section>
 
         <section class="labs-catalog" aria-label="Aftercode Labs Catalog">
@@ -251,15 +285,25 @@
         </section>
     </main>
 
-    <footer>
-                <nav class="footer-links" aria-label="Footer navigation">
+        <footer>
+        <div class="footer-cta">
+            <a class="btn btn-fiverr" href="https://www.fiverr.com/s/EgxBkAq" data-demo-disabled data-demo-message="Demo Mode - Feature Disabled.">Work with me on Fiverr</a>
+        </div>
+        <nav class="footer-links" aria-label="Footer navigation">
             <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="process.html">Process</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="projects.html">Projects</a></li>
+                <li><a href="shop.html">Shop</a></li>
                 <li><a href="tools.html">Tools</a></li>
+                <li><a href="labs.html" aria-current="page">Labs</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <p class="footer-note">Demo Mode &mdash; Updated Automatically via GitHub Pages.</p>
         <p>&copy; 2025 Aftercode. All rights reserved.</p>
     </footer>
     <div class="demo-modal" id="demo-modal" role="alertdialog" aria-modal="true" aria-labelledby="demo-modal-title" hidden>
