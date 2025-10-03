@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aftercode | Analytics Demo</title>
+    <link href="https://fonts.googleapis.com/css2&ndash;family=Audiowide&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="demo-banner" role="status">Aftercode is in Demo Mode - Preview Only</div>
+    <header>
+        <div class="brand">Aftercode</div>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="process.html">Process</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="labs.html">Labs</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="analytics.html" class="active" aria-current="page">Analytics</a></li>
+                <li><a href="client-dashboard.html">Dashboard</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-main analytics-page">
+        <section class="hero page-hero analytics-hero" aria-labelledby="analytics-title">
+            <div class="hero-content">
+                <h1 id="analytics-title" class="hero-title">Sample Analytics Dashboard</h1>
+                <p class="hero-subtitle">Preview how Aftercode tracks engagement, conversions, and user journeys while Demo Mode keeps real data offline.</p>
+            </div>
+        </section>
+
+        <section class="analytics-overview" aria-label="Analytics overview">
+            <div class="section-heading">
+                <h2 class="section-title">Live Signal Snapshot</h2>
+                <p class="section-description">All metrics below are Sample Analytics — the layout shows how real dashboards update when we switch to production.</p>
+            </div>
+            <div class="analytics-grid">
+                <article class="analytics-card analytics-card--visitors">
+                    <header class="analytics-card__header">
+                        <h3>Visitors (Sample)</h3>
+                        <span class="analytics-card__tag">+28% week over week</span>
+                    </header>
+                    <div class="analytics-card__chart analytics-chart--line" aria-hidden="true"></div>
+                    <p class="analytics-card__stat">3,240</p>
+                    <p class="analytics-card__note">Demo Mode renders this from placeholder data.</p>
+                </article>
+                <article class="analytics-card analytics-card--clicks">
+                    <header class="analytics-card__header">
+                        <h3>CTA Clicks (Sample)</h3>
+                        <span class="analytics-card__tag">Hot Paths</span>
+                    </header>
+                    <div class="analytics-card__chart analytics-chart--bar" aria-hidden="true"></div>
+                    <ul class="analytics-list">
+                        <li>Contact Form &mdash; 640</li>
+                        <li>Shop Preview &mdash; 410</li>
+                        <li>Dashboard Demo &mdash; 295</li>
+                        <li>Case Studies &mdash; 180</li>
+                    </ul>
+                </article>
+                <article class="analytics-card analytics-card--session">
+                    <header class="analytics-card__header">
+                        <h3>Time on Site (Sample)</h3>
+                        <span class="analytics-card__tag">Engagement</span>
+                    </header>
+                    <div class="analytics-card__chart analytics-chart--donut" aria-hidden="true"></div>
+                    <p class="analytics-card__stat">2m 47s avg</p>
+                    <p class="analytics-card__note">Shows how we surface dwell time before shipping to production.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="analytics-integrations" aria-labelledby="analytics-integrations-title">
+            <div class="section-heading">
+                <h2 id="analytics-integrations-title" class="section-title">Tracking Stack Preview</h2>
+                <p class="section-description">Scripts and events are parked while Demo Mode is active. When we go live, these hooks activate immediately.</p>
+            </div>
+            <div class="analytics-integrations__grid">
+                <article class="integration-card">
+                    <h3>Google Analytics (Sample)</h3>
+                    <p>Page views, acquisition, and conversion funnels wired with GA4.</p>
+                    <pre><code>analytics.initGA({ measurementId: 'G-XXXXXXX', demo: true });</code></pre>
+                </article>
+                <article class="integration-card">
+                    <h3>Hotjar (Sample)</h3>
+                    <p>Heatmaps, session recordings, and surveys to watch user flows.</p>
+                    <pre><code>analytics.initHotjar({ id: 123456, hjsv: 6, demo: true });</code></pre>
+                </article>
+                <article class="integration-card">
+                    <h3>Custom Events (Sample)</h3>
+                    <p>Tracks CTA clicks, form submissions, and feature engagement via custom dispatcher.</p>
+                    <pre><code>analytics.track('cta_click', { label: 'demo-contact', demo: true });</code></pre>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-cta">
+            <a class="btn btn-fiverr" href="https://www.fiverr.com/s/EgxBkAq" data-demo-disabled data-demo-message="Demo Mode - Feature Disabled.">Work with me on Fiverr</a>
+        </div>
+        <nav class="footer-links" aria-label="Footer navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="process.html">Process</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="labs.html">Labs</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="analytics.html" aria-current="page">Analytics</a></li>
+                <li><a href="client-dashboard.html">Dashboard</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <p class="footer-note">Demo Mode &mdash; Updated Automatically via GitHub Pages.</p>
+        <p>&copy; 2025 Aftercode. All rights reserved.</p>
+    </footer>
+
+    <div class="demo-modal" id="demo-modal" role="alertdialog" aria-modal="true" aria-labelledby="demo-modal-title" hidden>
+        <div class="demo-modal__dialog">
+            <h2 id="demo-modal-title" class="demo-modal__title">Aftercode Demo Mode</h2>
+            <p class="demo-modal__message" data-demo-message>Demo Mode - Feature Disabled</p>
+            <div class="demo-modal__actions">
+                <button type="button" class="btn btn-secondary" data-demo-dismiss>Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="analytics.js" defer></script>
+    <script src="main.js" defer></script>
+</body>
+</html>
