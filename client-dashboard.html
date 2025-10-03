@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aftercode | Client Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2&ndash;family=Audiowide&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="demo-banner" role="status">Aftercode is in Demo Mode - Preview Only</div>
+    <header>
+        <div class="brand">Aftercode</div>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="process.html">Process</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="labs.html">Labs</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="client-dashboard.html" class="active" aria-current="page">Dashboard</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-main dashboard-page">
+        <section class="hero page-hero dashboard-hero" aria-labelledby="dashboard-title">
+            <div class="hero-content">
+                <h1 id="dashboard-title" class="hero-title">Client Dashboard</h1>
+                <p class="hero-subtitle">Secure previews, milestone updates, and asset handoffs — all in one hub.</p>
+            </div>
+        </section>
+
+        <section class="dashboard-access" aria-label="Client login">
+            <form class="dashboard-login" data-demo-disabled data-demo-message="Demo Mode - Feature Disabled." aria-describedby="dashboard-login-note">
+                <h2 class="section-title">Account Access</h2>
+                <p id="dashboard-login-note" class="dashboard-note">Use your project email and passphrase to review progress. Demo Mode keeps the portal locked.</p>
+                <label class="form-field" for="dashboard-email">
+                    <span>Email</span>
+                    <input type="email" id="dashboard-email" name="dashboard-email" placeholder="you@company.com" required>
+                </label>
+                <label class="form-field" for="dashboard-password">
+                    <span>Password</span>
+                    <input type="password" id="dashboard-password" name="dashboard-password" placeholder="Enter passphrase" required>
+                </label>
+                <button class="btn btn-primary" type="submit">Log In</button>
+            </form>
+        </section>
+
+        <section class="dashboard-content" aria-label="Client project overview">
+            <div class="dashboard-layout">
+                <article class="dashboard-panel">
+                    <header class="dashboard-panel__header">
+                        <h2 class="section-title">My Projects</h2>
+                        <p class="section-description">Demo data showing how active engagements will appear.</p>
+                    </header>
+                    <ul class="dashboard-list">
+                        <li>
+                            <h3>Neon Launch Website</h3>
+                            <p>Current phase: QA + accessibility sweep. Next delivery: final hero animation preview.</p>
+                        </li>
+                        <li>
+                            <h3>Workflow Automation Suite</h3>
+                            <p>Integrations wired. Awaiting API credentials for CRM sync. Demo Mode hides secrets.</p>
+                        </li>
+                        <li>
+                            <h3>Creator Analytics Dashboard</h3>
+                            <p>Reporting layer staged. Final data visualization handoff scheduled for next sprint.</p>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="dashboard-panel dashboard-panel--messages">
+                    <header class="dashboard-panel__header">
+                        <h2 class="section-title">Messages</h2>
+                        <p class="section-description">Async updates and quick approvals flow through this feed.</p>
+                    </header>
+                    <div class="dashboard-chat" aria-live="polite">
+                        <div class="dashboard-chat__message dashboard-chat__message--system">
+                            <p><strong>System</strong> Demo Mode keeps real conversations hidden, but expect realtime pings here.</p>
+                            <time datetime="2025-03-01T09:24">Mar 1 • 9:24 AM</time>
+                        </div>
+                        <div class="dashboard-chat__message">
+                            <p><strong>Aftercode</strong> Next milestone build is ready for review. Leave notes and I&apos;ll patch fast.</p>
+                            <time datetime="2025-03-04T14:06">Mar 4 • 2:06 PM</time>
+                        </div>
+                    </div>
+                    <form class="dashboard-chat__form" data-demo-disabled data-demo-message="Demo Mode - Feature Disabled." aria-label="Send a message">
+                        <label class="visually-hidden" for="dashboard-message">Message</label>
+                        <input type="text" id="dashboard-message" name="dashboard-message" placeholder="Type a reply..." required>
+                        <button class="btn btn-secondary" type="submit">Send</button>
+                    </form>
+                </article>
+
+                <article class="dashboard-panel dashboard-panel--files">
+                    <header class="dashboard-panel__header">
+                        <h2 class="section-title">Files</h2>
+                        <p class="section-description">Secure asset delivery lands here with version history and notes.</p>
+                    </header>
+                    <ul class="dashboard-list dashboard-list--files">
+                        <li>
+                            <h3>Brand Style Guide v2</h3>
+                            <p>Latest revision uploaded. Demo Mode keeps downloads paused.</p>
+                        </li>
+                        <li>
+                            <h3>Product Screenshots Pack</h3>
+                            <p>Ready for marketing drop. Final color passes approved.</p>
+                        </li>
+                    </ul>
+                    <form class="dashboard-upload" data-demo-disabled data-demo-message="Demo Mode - Feature Disabled." aria-label="Upload file">
+                        <label class="upload-field" for="dashboard-file">
+                            <span>Upload new file</span>
+                            <input type="file" id="dashboard-file" name="dashboard-file" aria-disabled="true">
+                        </label>
+                        <button class="btn btn-secondary" type="submit">Upload</button>
+                    </form>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-cta">
+            <a class="btn btn-fiverr" href="https://www.fiverr.com/s/EgxBkAq" data-demo-disabled data-demo-message="Demo Mode - Feature Disabled.">Work with me on Fiverr</a>
+        </div>
+        <nav class="footer-links" aria-label="Footer navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="process.html">Process</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="labs.html">Labs</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="client-dashboard.html" aria-current="page">Dashboard</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <p class="footer-note">Demo Mode &mdash; Updated Automatically via GitHub Pages.</p>
+        <p>&copy; 2025 Aftercode. All rights reserved.</p>
+    </footer>
+    <div class="demo-modal" id="demo-modal" role="alertdialog" aria-modal="true" aria-labelledby="demo-modal-title" hidden>
+        <div class="demo-modal__dialog">
+            <h2 id="demo-modal-title" class="demo-modal__title">Aftercode Demo Mode</h2>
+            <p class="demo-modal__message" data-demo-message>Demo Mode - Feature Disabled</p>
+            <div class="demo-modal__actions">
+                <button type="button" class="btn btn-secondary" data-demo-dismiss>Close</button>
+            </div>
+        </div>
+    </div>
+    <script src="main.js" defer></script>
+</body>
+</html>

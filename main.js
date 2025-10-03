@@ -3,7 +3,7 @@
     const SEARCH_HIDDEN_CLASS = 'search-hidden';
     const SUGGESTION_ACTIVE_CLASS = 'search-suggestion--active';
     const MAX_SUGGESTIONS = 6;
-    const DEMO_MESSAGE_DEFAULT = 'Demo Mode — Feature Disabled';
+    const DEMO_MESSAGE_DEFAULT = 'Demo Mode - Feature Disabled';
 
     const SEARCH_INDEX = [
         {
@@ -672,7 +672,7 @@
 
             if (!term.trim()) {
                 clearHighlights();
-                setFeedback('Try keywords like “AI tools”, “resume”, or “custom PC”.');
+                setFeedback('Try keywords like "AI tools", "resume", or "custom PC".');
                 return;
             }
 
@@ -686,7 +686,7 @@
             } else if (matchCount > 0) {
                 setFeedback(`Found ${matchCount} on this page.`);
             } else {
-                setFeedback('No direct matches—press Enter to jump to the closest result.');
+                setFeedback('No direct matches - press Enter to jump to the closest result.');
             }
         };
 
@@ -752,7 +752,7 @@
         });
 
         renderSuggestions(currentSuggestions);
-        setFeedback('Try keywords like “AI tools”, “resume”, or “custom PC”.');
+        setFeedback('Try keywords like "AI tools", "resume", or "custom PC".');
     }
 
     function initExpandables() {
@@ -833,6 +833,10 @@
             const cards = Array.from(track.querySelectorAll('.testimonial-card'));
             if (cards.length < 2) return;
 
+            const container = track.closest('[data-testimonial-carousel]');
+            const prevBtn = container?.querySelector('[data-testimonial-prev]');
+            const nextBtn = container?.querySelector('[data-testimonial-next]');
+
             track.setAttribute('role', 'list');
             cards.forEach((card, index) => {
                 card.setAttribute('role', 'listitem');
@@ -840,6 +844,28 @@
             });
 
             let activeIndex = 0;
+
+            const updateNavState = () => {
+                if (!prevBtn && !nextBtn) return;
+                if (!mediaQuery.matches) {
+                    prevBtn?.setAttribute('disabled', 'true');
+                    nextBtn?.setAttribute('disabled', 'true');
+                    return;
+                }
+
+                if (activeIndex <= 0) {
+                    prevBtn?.setAttribute('disabled', 'true');
+                } else {
+                    prevBtn?.removeAttribute('disabled');
+                }
+
+                if (activeIndex >= cards.length - 1) {
+                    nextBtn?.setAttribute('disabled', 'true');
+                } else {
+                    nextBtn?.removeAttribute('disabled');
+                }
+            };
+
             const scrollToIndex = (index) => {
                 const nextIndex = Math.max(0, Math.min(index, cards.length - 1));
                 activeIndex = nextIndex;
@@ -851,6 +877,7 @@
                 } else {
                     track.scrollLeft = left;
                 }
+                updateNavState();
             };
 
             const syncFocusState = () => {
@@ -858,6 +885,7 @@
                     track.tabIndex = 0;
                     track.setAttribute('aria-live', 'polite');
                     track.setAttribute('aria-roledescription', 'carousel');
+                    updateNavState();
                 } else {
                     track.tabIndex = -1;
                     track.removeAttribute('aria-live');
@@ -868,8 +896,17 @@
                     } else {
                         track.scrollLeft = 0;
                     }
+                    updateNavState();
                 }
             };
+
+            prevBtn?.addEventListener('click', () => {
+                scrollToIndex(activeIndex - 1);
+            });
+
+            nextBtn?.addEventListener('click', () => {
+                scrollToIndex(activeIndex + 1);
+            });
 
             track.addEventListener('keydown', (event) => {
                 if (!mediaQuery.matches) return;
@@ -899,6 +936,7 @@
                         }
                     });
                     activeIndex = closest;
+                    updateNavState();
                 }, 120);
             }, { passive: true });
 
@@ -992,12 +1030,3 @@
         initServiceDemo();
     });
 })();
-
-
-
-
-
-
-
-
-

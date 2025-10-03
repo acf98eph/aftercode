@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="demo-banner" role="status">Aftercode is in Demo Mode - Preview Only</div>
-        <header>
+    <header>
         <div class="brand">Aftercode</div>
         <nav aria-label="Main Navigation">
             <ul>
@@ -21,6 +21,7 @@
                 <li><a href="tools.html">Tools</a></li>
                 <li><a href="labs.html">Labs</a></li>
                 <li><a href="blog.html" class="active" aria-current="page">Blog</a></li>
+                <li><a href="client-dashboard.html">Dashboard</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -40,10 +41,46 @@
             <div class="blog-post__content">
                 <p>This template ships with structured sections for intro, problem, solution, and outcomes. Replace the copy with your own narrative, drop screenshots in the hero, and keep the neon rhythm flowing.</p>
                 <p>Each section is spaced for readability on mobile and widescreen. Add callouts, checklists, or quotes using the existing utilities inside <code>style.css</code> for fast styling.</p>
-                <blockquote>“Write like you build &mdash; clear steps, transparent tooling, and bold visuals that show the work.”</blockquote>
+                <blockquote>"Write like you build &mdash; clear steps, transparent tooling, and bold visuals that show the work."</blockquote>
                 <p>Need to crosslink related projects or tools&ndash; Add them below and the global styles will keep things tight.</p>
             </div>
         </article>
+
+        <section class="blog-comments" aria-label="Reader comments">
+            <div class="section-heading">
+                <h2 class="section-title">Comments</h2>
+                <p class="section-description">Join the signal when Demo Mode lifts — for now, the thread shows how feedback lands.</p>
+            </div>
+            <div class="comment-thread">
+                <article class="comment-card">
+                    <header class="comment-card__header">
+                        <h3>Placeholder Reader</h3>
+                        <time datetime="2025-02-28">Feb 28, 2025</time>
+                    </header>
+                    <p>Love this breakdown. Would be curious how the automation scales once you add CRM triggers.</p>
+                </article>
+                <article class="comment-card">
+                    <header class="comment-card__header">
+                        <h3>Aftercode</h3>
+                        <time datetime="2025-03-01">Mar 1, 2025</time>
+                    </header>
+                    <p>Great question — the production flow uses webhooks plus queue workers. Demo Mode keeps the code offline, but happy to dive in when we connect.</p>
+                </article>
+            </div>
+            <form class="comment-form" data-demo-disabled data-demo-message="Demo Mode - Feature Disabled." aria-describedby="comment-disabled-note">
+                <h3 class="comment-form__title">Add your voice</h3>
+                <p id="comment-disabled-note" class="comment-form__note">Real posts accept comments once Demo Mode is off. Drop your thoughts after launch.</p>
+                <label class="form-field" for="comment-name">
+                    <span>Name</span>
+                    <input type="text" id="comment-name" name="comment-name" placeholder="Your name" required>
+                </label>
+                <label class="form-field" for="comment-message">
+                    <span>Comment</span>
+                    <textarea id="comment-message" name="comment-message" rows="4" placeholder="Share feedback or a question" required></textarea>
+                </label>
+                <button class="btn btn-secondary" type="submit">Post Comment</button>
+            </form>
+        </section>
 
         <section class="blog-post-cta" aria-label="Blog post call to action">
             <h2 class="section-title">Plan Your Next Launch</h2>
@@ -52,7 +89,7 @@
         </section>
     </main>
 
-        <footer>
+    <footer>
         <div class="footer-cta">
             <a class="btn btn-fiverr" href="https://www.fiverr.com/s/EgxBkAq" data-demo-disabled data-demo-message="Demo Mode - Feature Disabled.">Work with me on Fiverr</a>
         </div>
@@ -66,6 +103,7 @@
                 <li><a href="tools.html">Tools</a></li>
                 <li><a href="labs.html">Labs</a></li>
                 <li><a href="blog.html" aria-current="page">Blog</a></li>
+                <li><a href="client-dashboard.html">Dashboard</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>

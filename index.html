@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,10 +8,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>Automation test successful!</p>
-
-    <div class="demo-banner" role="status">Aftercode is in Demo Mode — Preview Only</div>
-        <header>
+    <div class="demo-banner" role="status">Aftercode is in Demo Mode - Preview Only</div>
+    <header>
         <div class="brand">Aftercode</div>
         <nav aria-label="Main Navigation">
             <ul>
@@ -23,6 +21,7 @@
                 <li><a href="tools.html">Tools</a></li>
                 <li><a href="labs.html">Labs</a></li>
                 <li><a href="blog.html">Blog</a></li>
+                <li><a href="client-dashboard.html">Dashboard</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -32,7 +31,7 @@
     <main class="home-main">
         <section id="home-hero" class="hero" aria-labelledby="aftercode-title">
             <div class="hero-content">
-                <h1 id="aftercode-title" class="hero-title">Aftercode — Building Websites, Apps, and Tools</h1>
+                <h1 id="aftercode-title" class="hero-title">Aftercode - Building Websites, Apps, and Tools</h1>
                 <p class="hero-subtitle">From custom websites to advanced software, I create solutions you can use.</p>
                 <a class="btn btn-primary" href="services.html">Explore Services</a>
             </div>
@@ -43,22 +42,63 @@
                 <h2 id="testimonials-title" class="section-title">What Clients Say</h2>
                 <p class="section-description">Feedback from collaborative builds and automation launches in the Aftercode pipeline.</p>
             </div>
-            <div class="testimonial-track">
-                <article class="testimonial-card">
-                    <div class="testimonial-card__glow" aria-hidden="true"></div>
-                    <p class="testimonial-card__quote">&ldquo;Aftercode translated rough notes into a ship-ready product experience &mdash; every milestone hit the timeline.&rdquo;</p>
-                    <p class="testimonial-card__author">Alex Rivera &bull; Launch Director</p>
-                </article>
-                <article class="testimonial-card">
-                    <div class="testimonial-card__glow" aria-hidden="true"></div>
-                    <p class="testimonial-card__quote">&ldquo;Our internal tools finally talk to each other. The automation workflow saved hours every single week.&rdquo;</p>
-                    <p class="testimonial-card__author">Morgan Lee &bull; Operations Lead</p>
-                </article>
-                <article class="testimonial-card">
-                    <div class="testimonial-card__glow" aria-hidden="true"></div>
-                    <p class="testimonial-card__quote">&ldquo;Design, dev, and launch all in one rhythm. The neon aesthetic is bold but still passes accessibility.&rdquo;</p>
-                    <p class="testimonial-card__author">Jordan Smith &bull; Creative Producer</p>
-                </article>
+            <div class="testimonial-carousel" data-testimonial-carousel>
+                <button class="testimonial-nav testimonial-nav--prev" type="button" aria-label="Previous testimonial" aria-controls="home-testimonials" data-testimonial-prev disabled>
+                    <span aria-hidden="true">&larr;</span>
+                </button>
+                <div class="testimonial-track" id="home-testimonials">
+                    <article class="testimonial-card">
+                        <div class="testimonial-card__glow" aria-hidden="true"></div>
+                        <figure class="testimonial-card__profile">
+                            <img src="https://via.placeholder.com/120/1e293b/94a3b8?text=AR" alt="Portrait of Alex Rivera" loading="lazy">
+                        </figure>
+                        <p class="testimonial-card__quote">&ldquo;Aftercode translated rough notes into a ship-ready product experience &mdash; every milestone hit the timeline.&rdquo;</p>
+                        <p class="testimonial-card__author">Alex Rivera &bull; Launch Director</p>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-card__glow" aria-hidden="true"></div>
+                        <figure class="testimonial-card__profile">
+                            <img src="https://via.placeholder.com/120/0f172a/38bdf8?text=ML" alt="Portrait of Morgan Lee" loading="lazy">
+                        </figure>
+                        <p class="testimonial-card__quote">&ldquo;Our internal tools finally talk to each other. The automation workflow saved hours every single week.&rdquo;</p>
+                        <p class="testimonial-card__author">Morgan Lee &bull; Operations Lead</p>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-card__glow" aria-hidden="true"></div>
+                        <figure class="testimonial-card__profile">
+                            <img src="https://via.placeholder.com/120/1e1b4b/f472b6?text=JS" alt="Portrait of Jordan Smith" loading="lazy">
+                        </figure>
+                        <p class="testimonial-card__quote">&ldquo;Design, dev, and launch all in one rhythm. The neon aesthetic is bold but still passes accessibility.&rdquo;</p>
+                        <p class="testimonial-card__author">Jordan Smith &bull; Creative Producer</p>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-card__glow" aria-hidden="true"></div>
+                        <figure class="testimonial-card__profile">
+                            <img src="https://via.placeholder.com/120/111827/22d3ee?text=SB" alt="Portrait of Sydney Blake" loading="lazy">
+                        </figure>
+                        <p class="testimonial-card__quote">&ldquo;Weekly check-ins, async Loom recaps, and lightning-fast fixes kept the project humming without ever feeling chaotic.&rdquo;</p>
+                        <p class="testimonial-card__author">Sydney Blake &bull; Product Ops Lead</p>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-card__glow" aria-hidden="true"></div>
+                        <figure class="testimonial-card__profile">
+                            <img src="https://via.placeholder.com/120/0b1120/60a5fa?text=RP" alt="Portrait of Ravi Patel" loading="lazy">
+                        </figure>
+                        <p class="testimonial-card__quote">&ldquo;The automation stack shipped production-ready, with documentation that let our engineering team iterate instantly.&rdquo;</p>
+                        <p class="testimonial-card__author">Ravi Patel &bull; CTO</p>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="testimonial-card__glow" aria-hidden="true"></div>
+                        <figure class="testimonial-card__profile">
+                            <img src="https://via.placeholder.com/120/020817/a855f7?text=EP" alt="Portrait of Elena Park" loading="lazy">
+                        </figure>
+                        <p class="testimonial-card__quote">&ldquo;Campaign assets, landing page variants, and analytics dashboards arrived in sync. Aftercode turned our launch week into a win.&rdquo;</p>
+                        <p class="testimonial-card__author">Elena Park &bull; Marketing Lead</p>
+                    </article>
+                </div>
+                <button class="testimonial-nav testimonial-nav--next" type="button" aria-label="Next testimonial" aria-controls="home-testimonials" data-testimonial-next>
+                    <span aria-hidden="true">&rarr;</span>
+                </button>
             </div>
             <div class="testimonials-cta">
                 <a class="btn btn-primary" href="contact.html">Your story could be next &rarr;</a>
@@ -66,7 +106,7 @@
         </section>
     </main>
 
-        <footer>
+    <footer>
         <div class="footer-cta">
             <a class="btn btn-fiverr" href="https://www.fiverr.com/s/EgxBkAq" data-demo-disabled data-demo-message="Demo Mode - Feature Disabled.">Work with me on Fiverr</a>
         </div>
@@ -80,6 +120,7 @@
                 <li><a href="tools.html">Tools</a></li>
                 <li><a href="labs.html">Labs</a></li>
                 <li><a href="blog.html">Blog</a></li>
+                <li><a href="client-dashboard.html">Dashboard</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -91,7 +132,7 @@
     <div class="demo-modal" id="demo-modal" role="alertdialog" aria-modal="true" aria-labelledby="demo-modal-title" hidden>
         <div class="demo-modal__dialog">
             <h2 id="demo-modal-title" class="demo-modal__title">Aftercode Demo Mode</h2>
-            <p class="demo-modal__message" data-demo-message>Demo Mode — Feature Disabled</p>
+            <p class="demo-modal__message" data-demo-message>Demo Mode - Feature Disabled</p>
             <div class="demo-modal__actions">
                 <button type="button" class="btn btn-secondary" data-demo-dismiss>Close</button>
             </div>
@@ -101,11 +142,3 @@
     <script src="main.js" defer></script>
 </body>
 </html>
-
-
-
-
-
-
-
-

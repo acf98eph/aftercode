@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="demo-banner" role="status">Aftercode is in Demo Mode - Preview Only</div>
-        <header>
+    <header>
         <div class="brand">Aftercode</div>
         <nav aria-label="Main Navigation">
             <ul>
@@ -21,6 +21,7 @@
                 <li><a href="tools.html">Tools</a></li>
                 <li><a href="labs.html">Labs</a></li>
                 <li><a href="blog.html" class="active" aria-current="page">Blog</a></li>
+                <li><a href="client-dashboard.html">Dashboard</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -35,47 +36,69 @@
             </div>
         </section>
 
+        <section class="blog-filters" aria-label="Filter blog categories">
+            <div class="filter-bar">
+                <p class="filter-bar__label">Browse by focus:</p>
+                <div class="filter-bar__controls" role="group" aria-label="Blog categories">
+                    <button class="filter-chip" type="button" data-demo-disabled data-demo-message="Demo Mode - Feature Disabled." aria-pressed="true">All</button>
+                    <button class="filter-chip" type="button" data-demo-disabled data-demo-message="Demo Mode - Feature Disabled.">Business</button>
+                    <button class="filter-chip" type="button" data-demo-disabled data-demo-message="Demo Mode - Feature Disabled.">Tech</button>
+                    <button class="filter-chip" type="button" data-demo-disabled data-demo-message="Demo Mode - Feature Disabled.">AI</button>
+                    <button class="filter-chip" type="button" data-demo-disabled data-demo-message="Demo Mode - Feature Disabled.">Tutorials</button>
+                </div>
+            </div>
+        </section>
+
         <section class="blog-list" aria-label="Latest articles">
             <div class="section-heading">
                 <h2 class="section-title">Latest Dispatches</h2>
                 <p class="section-description">Five quick reads that show how we turn ideas into polished launches. Tap any post to continue inside the template.</p>
             </div>
             <div class="blog-grid">
-                <article class="blog-card">
-                    <p class="blog-card__meta">March 18, 2025</p>
+                <article class="blog-card" data-category="business">
+                    <p class="blog-card__meta">March 18, 2025 &bull; Business</p>
                     <h3>Rebuilding a Launch System in 48 Hours</h3>
                     <p class="blog-card__excerpt">How a manual marketing workflow became an automated playbook with scheduled posts and analytics sync.</p>
                     <a class="btn btn-secondary" href="blog-post.html">Read More</a>
                 </article>
-                <article class="blog-card">
-                    <p class="blog-card__meta">March 4, 2025</p>
+                <article class="blog-card" data-category="tech">
+                    <p class="blog-card__meta">March 4, 2025 &bull; Tech</p>
                     <h3>The Stack Behind Aftercode&apos;s Demo Mode</h3>
                     <p class="blog-card__excerpt">A peek at the tooling, safeguards, and preview harness powering live product showcases without risk.</p>
                     <a class="btn btn-secondary" href="blog-post.html">Read More</a>
                 </article>
-                <article class="blog-card">
-                    <p class="blog-card__meta">February 21, 2025</p>
+                <article class="blog-card" data-category="ai">
+                    <p class="blog-card__meta">February 21, 2025 &bull; AI</p>
                     <h3>Designing Neon UI That Still Passes Contrast</h3>
                     <p class="blog-card__excerpt">Balancing bold gradients with WCAG-ready color ratios so every screen stays readable in the dark.</p>
                     <a class="btn btn-secondary" href="blog-post.html">Read More</a>
                 </article>
-                <article class="blog-card">
-                    <p class="blog-card__meta">February 2, 2025</p>
+                <article class="blog-card" data-category="business">
+                    <p class="blog-card__meta">February 2, 2025 &bull; Business</p>
                     <h3>Automation Field Notes: Client Intake</h3>
                     <p class="blog-card__excerpt">Capturing requirements faster with structured prompts, validation, and instant summary handoffs.</p>
                     <a class="btn btn-secondary" href="blog-post.html">Read More</a>
                 </article>
-                <article class="blog-card">
-                    <p class="blog-card__meta">January 12, 2025</p>
+                <article class="blog-card" data-category="tutorials">
+                    <p class="blog-card__meta">January 12, 2025 &bull; Tutorials</p>
                     <h3>From Concept to Case Study</h3>
                     <p class="blog-card__excerpt">Documenting every milestone so future clients can review transparent roadmaps before we even meet.</p>
                     <a class="btn btn-secondary" href="blog-post.html">Read More</a>
                 </article>
             </div>
+            <nav class="blog-pagination" aria-label="Blog pagination">
+                <button class="pagination-btn" type="button" data-demo-disabled data-demo-message="Demo Mode - Feature Disabled." aria-label="Go to previous page" disabled>Prev</button>
+                <div class="pagination-pages" role="group" aria-label="Page numbers">
+                    <button class="pagination-page is-active" type="button" data-demo-disabled data-demo-message="Demo Mode - Feature Disabled." aria-current="page">1</button>
+                    <button class="pagination-page" type="button" data-demo-disabled data-demo-message="Demo Mode - Feature Disabled.">2</button>
+                    <button class="pagination-page" type="button" data-demo-disabled data-demo-message="Demo Mode - Feature Disabled.">3</button>
+                </div>
+                <button class="pagination-btn" type="button" data-demo-disabled data-demo-message="Demo Mode - Feature Disabled." aria-label="Go to next page">Next</button>
+            </nav>
         </section>
     </main>
 
-        <footer>
+    <footer>
         <div class="footer-cta">
             <a class="btn btn-fiverr" href="https://www.fiverr.com/s/EgxBkAq" data-demo-disabled data-demo-message="Demo Mode - Feature Disabled.">Work with me on Fiverr</a>
         </div>
@@ -89,6 +112,7 @@
                 <li><a href="tools.html">Tools</a></li>
                 <li><a href="labs.html">Labs</a></li>
                 <li><a href="blog.html" aria-current="page">Blog</a></li>
+                <li><a href="client-dashboard.html">Dashboard</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>

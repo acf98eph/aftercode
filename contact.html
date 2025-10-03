@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="demo-banner" role="status">Aftercode is in Demo Mode — Preview Only</div>
-        <header>
+    <div class="demo-banner" role="status">Aftercode is in Demo Mode - Preview Only</div>
+    <header>
         <div class="brand">Aftercode</div>
         <nav aria-label="Main Navigation">
             <ul>
@@ -21,6 +21,7 @@
                 <li><a href="tools.html">Tools</a></li>
                 <li><a href="labs.html">Labs</a></li>
                 <li><a href="blog.html">Blog</a></li>
+                <li><a href="client-dashboard.html">Dashboard</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
             </ul>
@@ -36,42 +37,60 @@
         <p class="search-feedback" data-search-feedback></p>
     </div>
 
-    <main class="page-main">
-        <section class="hero page-hero" aria-labelledby="contact-title">
-            <h1 id="contact-title" class="hero-title">Contact Me</h1>
-            <p class="tagline">Let&apos;s build something that hits hard.</p>
+    <main class="page-main contact-page">
+        <section class="hero page-hero contact-hero" aria-labelledby="contact-title">
+            <div class="hero-content">
+                <h1 id="contact-title" class="hero-title">Contact Me</h1>
+                <p class="hero-subtitle">Share your roadmap, drop a question, or line up your next launch.</p>
+            </div>
         </section>
 
-        <section class="contact-section" aria-label="Contact Aftercode">
-            <form id="contact-form" class="contact-form" action="https://formspree.io/f/yourFormID" method="POST" data-search-target data-search-terms="contact form project quote message" data-demo-disabled>
-                <div class="form-field">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-field">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-field">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button class="btn btn-primary" type="submit">Send Message</button>
-            </form>
+        <section class="contact-wrapper" aria-label="Contact Aftercode">
+            <div class="contact-grid">
+                <form id="contact-form" class="contact-form" action="https://formspree.io/f/yourFormID" method="POST" data-search-target data-search-terms="contact form project quote message" data-demo-disabled data-demo-message="Demo Mode - Feature Disabled.">
+                    <h2 class="section-title">Send a Message</h2>
+                    <p class="section-description">Fields glow when they&apos;re ready. Demo Mode keeps submissions paused but show the flow your project will use.</p>
+                    <div class="form-field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@brand.com" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Tell me about your build, deadline, or pain point" required></textarea>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Send Message</button>
+                </form>
 
-            <div id="contact-alternatives" class="contact-alt" aria-label="Alternative Contact Methods" data-search-target data-search-terms="email phone github linkedin">
-                <h2>Connect Elsewhere</h2>
-                <ul>
-                    <li><a href="mailto:acf98ephaditest@icloud.com">acf98ephaditest@icloud.com</a></li>
-                    <li><a href="tel:+15022298258">502-229-8258 (Text Only)</a></li>
-                    <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
-                </ul>
+                <aside class="contact-sidebar" aria-label="CRM and direct contact" data-search-target data-search-terms="crm integration hubspot airtable contact details">
+                    <div class="contact-crm">
+                        <h2 class="section-title">Future CRM Integration</h2>
+                        <p class="section-description">HubSpot, Airtable, or your favorite stack can sync here for live deal tracking, follow-ups, and automated status updates.</p>
+                        <ul class="crm-list">
+                            <li>Capture leads directly from the form</li>
+                            <li>Trigger project pipelines and reminders</li>
+                            <li>Pipe updates into Slack, email, or SMS</li>
+                        </ul>
+                        <p class="crm-note">Demo Mode keeps these connectors in preview, but the layout is ready for production keys.</p>
+                    </div>
+                    <div class="contact-alt" aria-label="Alternative contact methods">
+                        <h2 class="section-title">Connect Elsewhere</h2>
+                        <ul>
+                            <li><a href="mailto:acf98ephaditest@icloud.com">acf98ephaditest@icloud.com</a></li>
+                            <li><a href="tel:+15022298258">502-229-8258 (Text Only)</a></li>
+                            <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </aside>
             </div>
         </section>
     </main>
 
-        <footer>
+    <footer>
         <div class="footer-cta">
             <a class="btn btn-fiverr" href="https://www.fiverr.com/s/EgxBkAq" data-demo-disabled data-demo-message="Demo Mode - Feature Disabled.">Work with me on Fiverr</a>
         </div>
@@ -85,6 +104,7 @@
                 <li><a href="tools.html">Tools</a></li>
                 <li><a href="labs.html">Labs</a></li>
                 <li><a href="blog.html">Blog</a></li>
+                <li><a href="client-dashboard.html">Dashboard</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html" aria-current="page">Contact</a></li>
             </ul>
@@ -95,7 +115,7 @@
     <div class="demo-modal" id="demo-modal" role="alertdialog" aria-modal="true" aria-labelledby="demo-modal-title" hidden>
         <div class="demo-modal__dialog">
             <h2 id="demo-modal-title" class="demo-modal__title">Aftercode Demo Mode</h2>
-            <p class="demo-modal__message" data-demo-message>Demo Mode — Feature Disabled</p>
+            <p class="demo-modal__message" data-demo-message>Demo Mode - Feature Disabled</p>
             <div class="demo-modal__actions">
                 <button type="button" class="btn btn-secondary" data-demo-dismiss>Close</button>
             </div>
@@ -104,17 +124,3 @@
     <script src="main.js" defer></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
