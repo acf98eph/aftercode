@@ -1,4 +1,4 @@
-/* Aftercode Demo Mode Theme */
+﻿/* Aftercode Demo Mode Theme */
 :root {
     --bg-base: #0d1117;
     --bg-elevated: rgba(18, 24, 35, 0.9);
@@ -1087,6 +1087,7 @@ footer {
         opacity: 0.85;
         transform: scale(1.08);
     }
+}
 
 /* Shop */
 .shop-page .page-hero {
@@ -1591,6 +1592,16 @@ footer {
 /* FAQ page */
 .faq-page .page-hero {
     text-align: center;
+    padding: clamp(3rem, 10vw, 5rem) 0 clamp(1.5rem, 6vw, 3rem);
+}
+
+.faq-page .page-hero .hero-title {
+    margin-bottom: 0.75rem;
+}
+
+.faq-page .page-hero .hero-subtitle {
+    max-width: min(640px, 90%);
+    margin: 0 auto;
 }
 
 .faq-accordion {
@@ -1601,22 +1612,39 @@ footer {
 
 .faq-accordion__items {
     display: grid;
-    gap: 1.5rem;
+    gap: clamp(1rem, 3vw, 1.5rem);
 }
 
 .faq-item {
-    background: var(--bg-panel);
-    border-radius: 26px;
-    border: 1px solid rgba(59, 130, 246, 0.28);
-    box-shadow: 0 26px 52px rgba(0, 0, 0, 0.5);
+    position: relative;
     padding: clamp(1.25rem, 3vw, 1.75rem);
-    transition: border-color var(--transition-med), box-shadow var(--transition-med), transform var(--transition-med);
+    border-radius: 24px;
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    background: rgba(15, 23, 42, 0.32);
+    backdrop-filter: blur(8px);
+    transition: border-color var(--transition-med), box-shadow var(--transition-med), transform var(--transition-med), background var(--transition-med);
+}
+
+.faq-item::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    background: radial-gradient(circle at top, rgba(59, 130, 246, 0.45), transparent 70%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-med);
 }
 
 .faq-item[open] {
-    border-color: rgba(168, 85, 247, 0.45);
-    box-shadow: 0 32px 60px rgba(5, 12, 24, 0.68);
-    transform: translateY(-4px);
+    border-color: rgba(96, 165, 250, 0.9);
+    background: rgba(15, 23, 42, 0.55);
+    transform: translateY(-3px);
+    box-shadow: 0 24px 48px rgba(59, 130, 246, 0.28);
+}
+
+.faq-item[open]::before {
+    opacity: 1;
 }
 
 .faq-item summary {
@@ -1625,9 +1653,9 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
-    font-size: 1rem;
-    letter-spacing: 0.12rem;
+    gap: 1.25rem;
+    font-size: 1.05rem;
+    letter-spacing: 0.08rem;
     text-transform: uppercase;
     color: var(--text-heading);
 }
@@ -1639,23 +1667,30 @@ footer {
 .faq-item summary::after {
     content: '+';
     font-size: 1.4rem;
-    transition: transform var(--transition-fast);
-    color: var(--accent-secondary);
+    line-height: 1;
+    transition: transform var(--transition-fast), color var(--transition-fast), text-shadow var(--transition-fast);
+    color: rgba(148, 163, 184, 0.85);
 }
 
 .faq-item[open] summary::after {
     transform: rotate(45deg);
+    color: var(--accent-secondary);
+    text-shadow: 0 0 18px rgba(168, 85, 247, 0.8);
 }
 
-.faq-item summary:focus {
+.faq-item summary:focus-visible {
     outline: none;
     color: var(--accent-primary);
 }
 
 .faq-answer {
-    margin-top: 1rem;
+    margin-top: 0.85rem;
     color: var(--text-muted);
     line-height: 1.7;
+}
+
+.faq-answer p {
+    margin: 0;
 }
 
 .help-center {
@@ -1666,23 +1701,25 @@ footer {
 
 .help-center__grid {
     display: grid;
-    gap: clamp(2rem, 6vw, 3rem);
-    grid-template-columns: minmax(280px, 1fr) minmax(240px, 320px);
+    gap: clamp(2rem, 6vw, 3.25rem);
+    grid-template-columns: minmax(320px, 1.25fr) minmax(260px, 1fr);
+    align-items: stretch;
 }
 
 .help-form {
     display: grid;
-    gap: 1.25rem;
-    background: var(--bg-panel);
-    border-radius: 28px;
-    border: 1px solid rgba(59, 130, 246, 0.32);
-    box-shadow: 0 30px 58px rgba(0, 0, 0, 0.52);
+    gap: 1.5rem;
     padding: clamp(2rem, 5vw, 2.75rem);
+    border-radius: 28px;
+    border: 1px solid rgba(148, 163, 184, 0.26);
+    background: rgba(15, 23, 42, 0.42);
+    box-shadow: 0 22px 46px rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(8px);
 }
 
 .help-form__title {
     margin: 0;
-    letter-spacing: 0.18rem;
+    letter-spacing: 0.14rem;
     text-transform: uppercase;
     color: var(--text-heading);
 }
@@ -1696,15 +1733,15 @@ footer {
     display: grid;
     gap: 1.5rem;
     padding: clamp(2rem, 5vw, 2.5rem);
-    background: var(--bg-panel-soft);
     border-radius: 24px;
-    border: 1px solid rgba(168, 85, 247, 0.28);
-    box-shadow: 0 26px 52px rgba(4, 10, 20, 0.48);
+    border: 1px solid rgba(168, 85, 247, 0.32);
+    background: rgba(15, 23, 42, 0.34);
+    box-shadow: 0 20px 40px rgba(2, 6, 23, 0.5);
 }
 
 .help-links__title {
     margin: 0;
-    letter-spacing: 0.18rem;
+    letter-spacing: 0.14rem;
     text-transform: uppercase;
 }
 
@@ -1724,7 +1761,7 @@ footer {
 .help-links__list a:hover,
 .help-links__list a:focus {
     color: var(--accent-primary);
-    text-shadow: 0 0 18px rgba(59, 130, 246, 0.45);
+    text-shadow: 0 0 18px rgba(59, 130, 246, 0.5);
 }
 
 .help-links__note {
@@ -1740,11 +1777,12 @@ footer {
 
 @media (max-width: 620px) {
     .faq-item {
-        padding: 1.25rem;
+        padding: 1.1rem;
     }
 
     .faq-item summary {
         font-size: 0.95rem;
+        letter-spacing: 0.06rem;
     }
 }
 /* Labs showcase */
@@ -2253,6 +2291,76 @@ footer {
     .hero {
         padding: 2.5rem 1.6rem;
     }
+}
+/* --- Responsive Design --- */
+
+/* Tablets and small laptops */
+@media (max-width: 1024px) {
+  body {
+    padding: 20px;
+    font-size: 18px;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Phones and small screens */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  /* Stack elements vertically */
+  .grid,
+  .services,
+  .projects,
+  .shop-items {
+    grid-template-columns: 1fr;
+  }
+
+  /* Make buttons full width */
+  button, .btn, .cta-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  /* Simplify navbar */
+  nav ul {
+    display: none; /* Hide desktop nav */
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    color: #39ff14;
+    font-size: 28px;
+    padding: 10px;
+  }
+
+  /* Mobile nav dropdown */
+  nav.active ul {
+    display: flex;
+    flex-direction: column;
+    background-color: #0d1117;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    border-top: 1px solid #3b82f6;
+  }
+
+  footer {
+    text-align: center;
+  }
 }
 
 

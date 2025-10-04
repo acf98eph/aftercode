@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aftercode | Analytics Demo</title>
+    <title>Aftercode | Analytics Demo</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://fonts.googleapis.com/css2&ndash;family=Audiowide&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -31,49 +32,60 @@
     </header>
 
     <main class="page-main analytics-page">
-        <section class="hero page-hero analytics-hero" aria-labelledby="analytics-title">
+        <section class="page-hero analytics-hero" aria-labelledby="analytics-title">
             <div class="hero-content">
                 <h1 id="analytics-title" class="hero-title">Sample Analytics Dashboard</h1>
                 <p class="hero-subtitle">Preview how Aftercode tracks engagement, conversions, and user journeys while Demo Mode keeps real data offline.</p>
+                <p class="hero-meta"><span class="analytics-chip" data-sample-label>Sample Analytics</span> All values on this page show demonstration data only.</p>
             </div>
         </section>
 
         <section class="analytics-overview" aria-label="Analytics overview">
             <div class="section-heading">
                 <h2 class="section-title">Live Signal Snapshot</h2>
-                <p class="section-description">All metrics below are Sample Analytics — the layout shows how real dashboards update when we switch to production.</p>
+                <p class="section-description">Every widget is tagged as <strong>Sample Analytics</strong> so you know Demo Mode is supplying the numbers.</p>
             </div>
-            <div class="analytics-grid">
+            <div class="analytics-grid" data-sample-dashboard>
                 <article class="analytics-card analytics-card--visitors">
                     <header class="analytics-card__header">
-                        <h3>Visitors (Sample)</h3>
-                        <span class="analytics-card__tag">+28% week over week</span>
+                        <div>
+                            <h3>Visitors</h3>
+                            <span class="analytics-card__meta" data-sample-change>+28% week over week</span>
+                        </div>
+                        <span class="analytics-chip" data-sample-label>Sample Analytics</span>
                     </header>
-                    <div class="analytics-card__chart analytics-chart--line" aria-hidden="true"></div>
-                    <p class="analytics-card__stat">3,240</p>
-                    <p class="analytics-card__note">Demo Mode renders this from placeholder data.</p>
+                    <div class="analytics-card__chart analytics-chart--line" data-chart="visitors-trend" aria-hidden="true"></div>
+                    <p class="analytics-card__stat" data-sample-visitors>3,240</p>
+                    <p class="analytics-card__note">Demo Mode renders trends from placeholder traffic signals.</p>
                 </article>
                 <article class="analytics-card analytics-card--clicks">
                     <header class="analytics-card__header">
-                        <h3>CTA Clicks (Sample)</h3>
-                        <span class="analytics-card__tag">Hot Paths</span>
+                        <div>
+                            <h3>Click Paths</h3>
+                            <span class="analytics-card__meta">Hot touchpoints</span>
+                        </div>
+                        <span class="analytics-chip" data-sample-label>Sample Analytics</span>
                     </header>
-                    <div class="analytics-card__chart analytics-chart--bar" aria-hidden="true"></div>
-                    <ul class="analytics-list">
-                        <li>Contact Form &mdash; 640</li>
-                        <li>Shop Preview &mdash; 410</li>
-                        <li>Dashboard Demo &mdash; 295</li>
-                        <li>Case Studies &mdash; 180</li>
+                    <div class="analytics-card__chart analytics-chart--bar" data-chart="clicks" aria-hidden="true"></div>
+                    <ul class="analytics-list" data-sample-clicks>
+                        <li><span>Contact Form</span><span>640</span></li>
+                        <li><span>Shop Preview</span><span>410</span></li>
+                        <li><span>Dashboard Demo</span><span>295</span></li>
+                        <li><span>Case Studies</span><span>180</span></li>
                     </ul>
+                    <p class="analytics-card__note">Swap in your live events and goals when the site goes to production.</p>
                 </article>
                 <article class="analytics-card analytics-card--session">
                     <header class="analytics-card__header">
-                        <h3>Time on Site (Sample)</h3>
-                        <span class="analytics-card__tag">Engagement</span>
+                        <div>
+                            <h3>Time on Site</h3>
+                            <span class="analytics-card__meta">Engagement</span>
+                        </div>
+                        <span class="analytics-chip" data-sample-label>Sample Analytics</span>
                     </header>
-                    <div class="analytics-card__chart analytics-chart--donut" aria-hidden="true"></div>
-                    <p class="analytics-card__stat">2m 47s avg</p>
-                    <p class="analytics-card__note">Shows how we surface dwell time before shipping to production.</p>
+                    <div class="analytics-card__chart analytics-chart--donut" data-chart="time-on-site" aria-hidden="true"></div>
+                    <p class="analytics-card__stat" data-sample-time>2m 47s</p>
+                    <p class="analytics-card__note">Segments illustrate how we present dwell time before shipping a live feed.</p>
                 </article>
             </div>
         </section>
@@ -81,23 +93,32 @@
         <section class="analytics-integrations" aria-labelledby="analytics-integrations-title">
             <div class="section-heading">
                 <h2 id="analytics-integrations-title" class="section-title">Tracking Stack Preview</h2>
-                <p class="section-description">Scripts and events are parked while Demo Mode is active. When we go live, these hooks activate immediately.</p>
+                <p class="section-description">Scripts and events are paused in Demo Mode. Once you approve the launch, the real trackers replace these placeholders instantly.</p>
             </div>
             <div class="analytics-integrations__grid">
                 <article class="integration-card">
-                    <h3>Google Analytics (Sample)</h3>
+                    <header class="integration-card__header">
+                        <h3>Google Analytics</h3>
+                        <span class="analytics-chip" data-sample-label>Sample Analytics</span>
+                    </header>
                     <p>Page views, acquisition, and conversion funnels wired with GA4.</p>
-                    <pre><code>analytics.initGA({ measurementId: 'G-XXXXXXX', demo: true });</code></pre>
+                    <pre><code>analytics.initGA({ measurementId: 'G-XXXXXXX' });</code></pre>
                 </article>
                 <article class="integration-card">
-                    <h3>Hotjar (Sample)</h3>
-                    <p>Heatmaps, session recordings, and surveys to watch user flows.</p>
-                    <pre><code>analytics.initHotjar({ id: 123456, hjsv: 6, demo: true });</code></pre>
+                    <header class="integration-card__header">
+                        <h3>Hotjar</h3>
+                        <span class="analytics-chip" data-sample-label>Sample Analytics</span>
+                    </header>
+                    <p>Heatmaps, session recordings, and surveys keep user flows transparent.</p>
+                    <pre><code>analytics.initHotjar({ id: 123456, hjsv: 6 });</code></pre>
                 </article>
                 <article class="integration-card">
-                    <h3>Custom Events (Sample)</h3>
-                    <p>Tracks CTA clicks, form submissions, and feature engagement via custom dispatcher.</p>
-                    <pre><code>analytics.track('cta_click', { label: 'demo-contact', demo: true });</code></pre>
+                    <header class="integration-card__header">
+                        <h3>Custom Events</h3>
+                        <span class="analytics-chip" data-sample-label>Sample Analytics</span>
+                    </header>
+                    <p>Tracks CTA clicks, form submissions, and feature engagement via a custom dispatcher.</p>
+                    <pre><code>analytics.track('cta_click', { label: 'demo-contact' });</code></pre>
                 </article>
             </div>
         </section>
