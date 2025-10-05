@@ -7,7 +7,7 @@
     <meta name="description" content="Aftercode builds launch-ready websites, automations, and tools inside a neon-powered demo workspace." />
     <meta name="keywords" content="Aftercode, web development, automation, product design, digital products, neon interface" />
     <meta name="author" content="Aftercode" />
-    <meta name="theme-color" content="#0d1117" />
+    <meta name="theme-color" content="#0b0c0f" />
     <meta name="robots" content="index, follow" />
     <meta property="og:site_name" content="Aftercode" />
     <meta property="og:type" content="website" />
@@ -30,132 +30,100 @@
 </head>
 <body>
         <div class="demo-banner" role="status">Aftercode is in Demo Mode — Preview Only</div>
-    <header>
-        <div class="brand">Aftercode</div>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
-            <span class="visually-hidden">Toggle navigation</span>
-            <span class="menu-toggle__bars" aria-hidden="true"></span>
-        </button>
-        <nav aria-label="Main navigation">
-            <ul id="primary-navigation">
-                <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-                <li><a href="process.html">Process</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="tools.html">Tools</a></li>
-                <li><a href="labs.html">Labs</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="analytics.html">Analytics</a></li>
-                <li><a href="client-dashboard.html">Dashboard</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <header class="site-header" data-menu-open="false">
+        <div class="nav-container">
+            <a class="brand" href="index.html" aria-label="Aftercode home">
+                <span class="brand-logo">Aftercode</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="visually-hidden">Toggle navigation</span>
+                <span class="menu-toggle__bars" aria-hidden="true"></span>
+            </button>
+            <nav class="primary-nav" aria-label="Primary navigation">
+                <ul id="primary-navigation" class="nav-list">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item nav-item--has-dropdown">
+                        <button class="nav-link" type="button" data-nav-toggle aria-haspopup="true" aria-expanded="false">
+                            Services
+                            <span class="nav-caret" aria-hidden="true"></span>
+                        </button>
+                        <ul class="dropdown" role="menu">
+                            <li><a href="services.html#custom-websites">Websites</a></li>
+                            <li><a href="services.html#workflow-automation-scripts">Automation</a></li>
+                            <li><a href="services.html#mobile-apps">Software</a></li>
+                            <li><a href="services.html#chatbot-setup">AI Tools</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-item--has-dropdown">
+                        <button class="nav-link" type="button" data-nav-toggle aria-haspopup="true" aria-expanded="false">
+                            Projects
+                            <span class="nav-caret" aria-hidden="true"></span>
+                        </button>
+                        <ul class="dropdown" role="menu">
+                            <li><a href="case-study.html">Case Studies</a></li>
+                            <li><a href="projects.html">Demos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-item--has-dropdown">
+                        <button class="nav-link" type="button" data-nav-toggle aria-haspopup="true" aria-expanded="false">
+                            Community
+                            <span class="nav-caret" aria-hidden="true"></span>
+                        </button>
+                        <ul class="dropdown" role="menu">
+                            <li><a href="#" data-demo-disabled data-demo-message="Community spaces coming soon.">Forums</a></li>
+                            <li><a href="#" data-demo-disabled data-demo-message="Community spaces coming soon.">Chatroom</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-item--has-dropdown">
+                        <button class="nav-link" type="button" data-nav-toggle aria-haspopup="true" aria-expanded="false">
+                            Store
+                            <span class="nav-caret" aria-hidden="true"></span>
+                        </button>
+                        <ul class="dropdown" role="menu">
+                            <li><a href="shop.html">Apps</a></li>
+                            <li><a href="shop.html">Merch</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="process.html">Process</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tools.html">Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="labs.html">Labs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a class="btn btn-ghost nav-action" href="#" data-demo-disabled data-demo-message="Account portal coming soon.">Sign In</a>
+                    <a class="btn btn-primary nav-action" href="#" data-demo-disabled data-demo-message="Account portal coming soon.">Create Account</a>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <main class="home-main">
-        <section id="home-hero" class="hero" aria-labelledby="aftercode-title">
-            <div class="hero-content">
-                <h1 id="aftercode-title" class="hero-title">Aftercode - Building Websites, Apps, and Tools</h1>
-                <p class="hero-subtitle">From custom websites to advanced software, I create solutions you can use.</p>
-                <a class="btn btn-primary" href="services.html">Explore Services</a>
-            </div>
-        </section>
-
-        <section class="testimonials" aria-labelledby="testimonials-title">
-            <div class="section-heading">
-                <h2 id="testimonials-title" class="section-title">What Clients Say</h2>
-                <p class="section-description">Feedback from collaborative builds and automation launches in the Aftercode pipeline.</p>
-            </div>
-            <div class="testimonial-carousel" data-testimonial-carousel>
-                <button class="testimonial-nav testimonial-nav--prev" type="button" aria-label="Previous testimonial" aria-controls="home-testimonials" data-testimonial-prev disabled>
-                    <span aria-hidden="true">&larr;</span>
-                </button>
-                <div class="testimonial-track" id="home-testimonials">
-                    <article class="testimonial-card">
-                        <div class="testimonial-card__glow" aria-hidden="true"></div>
-                        <figure class="testimonial-card__profile">
-                            <img src="https://via.placeholder.com/120/1e293b/94a3b8?text=AR" alt="Portrait of Alex Rivera" loading="lazy">
-                        </figure>
-                        <p class="testimonial-card__quote">&ldquo;Aftercode translated rough notes into a ship-ready product experience &mdash; every milestone hit the timeline.&rdquo;</p>
-                        <p class="testimonial-card__author">Alex Rivera &bull; Launch Director</p>
-                    </article>
-                    <article class="testimonial-card">
-                        <div class="testimonial-card__glow" aria-hidden="true"></div>
-                        <figure class="testimonial-card__profile">
-                            <img src="https://via.placeholder.com/120/0f172a/38bdf8?text=ML" alt="Portrait of Morgan Lee" loading="lazy">
-                        </figure>
-                        <p class="testimonial-card__quote">&ldquo;Our internal tools finally talk to each other. The automation workflow saved hours every single week.&rdquo;</p>
-                        <p class="testimonial-card__author">Morgan Lee &bull; Operations Lead</p>
-                    </article>
-                    <article class="testimonial-card">
-                        <div class="testimonial-card__glow" aria-hidden="true"></div>
-                        <figure class="testimonial-card__profile">
-                            <img src="https://via.placeholder.com/120/1e1b4b/f472b6?text=JS" alt="Portrait of Jordan Smith" loading="lazy">
-                        </figure>
-                        <p class="testimonial-card__quote">&ldquo;Design, dev, and launch all in one rhythm. The neon aesthetic is bold but still passes accessibility.&rdquo;</p>
-                        <p class="testimonial-card__author">Jordan Smith &bull; Creative Producer</p>
-                    </article>
-                    <article class="testimonial-card">
-                        <div class="testimonial-card__glow" aria-hidden="true"></div>
-                        <figure class="testimonial-card__profile">
-                            <img src="https://via.placeholder.com/120/111827/22d3ee?text=SB" alt="Portrait of Sydney Blake" loading="lazy">
-                        </figure>
-                        <p class="testimonial-card__quote">&ldquo;Weekly check-ins, async Loom recaps, and lightning-fast fixes kept the project humming without ever feeling chaotic.&rdquo;</p>
-                        <p class="testimonial-card__author">Sydney Blake &bull; Product Ops Lead</p>
-                    </article>
-                    <article class="testimonial-card">
-                        <div class="testimonial-card__glow" aria-hidden="true"></div>
-                        <figure class="testimonial-card__profile">
-                            <img src="https://via.placeholder.com/120/0b1120/60a5fa?text=RP" alt="Portrait of Ravi Patel" loading="lazy">
-                        </figure>
-                        <p class="testimonial-card__quote">&ldquo;The automation stack shipped production-ready, with documentation that let our engineering team iterate instantly.&rdquo;</p>
-                        <p class="testimonial-card__author">Ravi Patel &bull; CTO</p>
-                    </article>
-                    <article class="testimonial-card">
-                        <div class="testimonial-card__glow" aria-hidden="true"></div>
-                        <figure class="testimonial-card__profile">
-                            <img src="https://via.placeholder.com/120/020817/a855f7?text=EP" alt="Portrait of Elena Park" loading="lazy">
-                        </figure>
-                        <p class="testimonial-card__quote">&ldquo;Campaign assets, landing page variants, and analytics dashboards arrived in sync. Aftercode turned our launch week into a win.&rdquo;</p>
-                        <p class="testimonial-card__author">Elena Park &bull; Marketing Lead</p>
-                    </article>
+        <main class="home-main">
+        <section id="home-hero" class="hero hero--homepage" aria-labelledby="aftercode-title">
+            <div class="hero-inner">
+                <h1 id="aftercode-title" class="hero-logo">Aftercode</h1>
+                <p class="hero-tagline">The Hub for Creation, Automation, and Innovation.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary btn-large" href="services.html">Explore Services</a>
+                    <a class="btn btn-secondary btn-large" href="projects.html">See Projects</a>
                 </div>
-                <button class="testimonial-nav testimonial-nav--next" type="button" aria-label="Next testimonial" aria-controls="home-testimonials" data-testimonial-next>
-                    <span aria-hidden="true">&rarr;</span>
-                </button>
-            </div>
-            <div class="testimonials-cta">
-                <a class="btn btn-primary" href="contact.html">Your story could be next &rarr;</a>
+                <p class="hero-intro">From AI tools to web apps and creative projects, Aftercode connects ideas, automation, and innovation for everyone.</p>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="footer-cta">
-            <a class="btn btn-fiverr" href="https://www.fiverr.com/s/EgxBkAq" data-demo-disabled data-demo-message="Demo Mode - Feature Disabled.">Work with me on Fiverr</a>
-        </div>
-        <nav class="footer-links" aria-label="Footer navigation">
+        <footer class="site-footer">
+        <nav class="footer-links" aria-label="Quick links">
             <ul>
-                <li><a href="index.html" aria-current="page">Home</a></li>
-                <li><a href="process.html">Process</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="tools.html">Tools</a></li>
-                <li><a href="labs.html">Labs</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="analytics.html">Analytics</a></li>
-                <li><a href="client-dashboard.html">Dashboard</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="terms.html">Terms</a></li>
             </ul>
         </nav>
-        <p class="footer-note">Demo Mode &mdash; Updated Automatically via GitHub Pages.</p>
-        <p>&copy; 2025 Aftercode. All rights reserved.</p>
+        <p class="footer-copy">&copy; 2025 Aftercode. All Rights Reserved.</p>
+        <p class="footer-note">Built by Austin Franklin &mdash; Powered by Aftercode.</p>
     </footer>
 
     <div class="demo-modal" id="demo-modal" role="alertdialog" aria-modal="true" aria-labelledby="demo-modal-title" hidden>
@@ -171,6 +139,9 @@
     <script src="main.js" defer></script>
 </body>
 </html>
+
+
+
 
 
 

@@ -376,6 +376,120 @@
             keywords: 'contact email message quote support text phone'
         }
     ];
+    function highlightActiveNavLink() {
+        const header = document.querySelector('header');
+        if (!header) {
+            return;
+        }
+
+        const links = header.querySelectorAll('nav a[href]');
+        if (!links.length) {
+            return;
+        }
+
+        const currentPath = window.location.pathname.split('/').filter(Boolean).pop() || 'index.html';
+
+        links.forEach((link) => {
+            const href = link.getAttribute('href');
+            if (!href || href.startsWith('#')) {
+                return;
+            }
+            const normalized = href.split('#')[0];
+            if (normalized === currentPath) {
+                link.setAttribute('aria-current', 'page');
+            } else {
+                link.removeAttribute('aria-current');
+            }
+        });
+    }
+
+    function initStickyHeader() {
+        const header = document.querySelector('header');
+        if (!header) {
+            return;
+        }
+
+        const updateState = () => {
+            const scrolled = window.scrollY > 12;
+            header.dataset.scrolled = scrolled ? 'true' : 'false';
+        };
+
+        updateState();
+        window.addEventListener('scroll', updateState, { passive: true });
+    }
+
+    function initNavDropdowns() {
+        const header = document.querySelector('header');
+        if (!header) {
+            return;
+        }
+
+        const toggles = header.querySelectorAll('[data-nav-toggle]');
+        if (!toggles.length) {
+            return;
+        }
+
+        const closeAll = (except) => {
+            toggles.forEach((toggle) => {
+                if (except && toggle === except) {
+                    return;
+                }
+                toggle.setAttribute('aria-expanded', 'false');
+                toggle.closest('.nav-item')?.classList.remove('is-open');
+            });
+        };
+
+        toggles.forEach((toggle) => {
+            toggle.setAttribute('aria-expanded', toggle.getAttribute('aria-expanded') || 'false');
+
+            toggle.addEventListener('click', () => {
+                const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+                if (isOpen) {
+                    toggle.setAttribute('aria-expanded', 'false');
+                    toggle.closest('.nav-item')?.classList.remove('is-open');
+                } else {
+                    closeAll(toggle);
+                    toggle.setAttribute('aria-expanded', 'true');
+                    toggle.closest('.nav-item')?.classList.add('is-open');
+                }
+            });
+
+            toggle.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+                    toggle.setAttribute('aria-expanded', 'false');
+                    toggle.closest('.nav-item')?.classList.remove('is-open');
+                    toggle.focus();
+                }
+            });
+
+            const parentItem = toggle.closest('.nav-item');
+            parentItem?.addEventListener('focusout', (event) => {
+                const related = event.relatedTarget;
+                if (!related || !(related instanceof HTMLElement) || !parentItem.contains(related)) {
+                    toggle.setAttribute('aria-expanded', 'false');
+                    parentItem.classList.remove('is-open');
+                }
+            });
+        });
+
+        document.addEventListener('click', (event) => {
+            const target = event.target;
+            if (!(target instanceof HTMLElement)) {
+                return;
+            }
+            if (!header.contains(target)) {
+                closeAll();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeAll();
+            }
+        });
+    }
+
+
 
     function initMobileNav() {
         const header = document.querySelector('header');
@@ -384,23 +498,31 @@
         }
 
         const toggle = header.querySelector('.menu-toggle');
-        const navList = header.querySelector('nav ul');
+        const navRoot = header.querySelector('nav');
 
-        if (!toggle || !navList) {
+        if (!toggle || !navRoot) {
             return;
         }
+
+        const dropdownToggles = header.querySelectorAll('[data-nav-toggle]');
+        const closeDropdowns = () => {
+            dropdownToggles.forEach((button) => {
+                button.setAttribute('aria-expanded', 'false');
+                button.closest('.nav-item')?.classList.remove('is-open');
+            });
+        };
 
         const closeMenu = () => {
             header.dataset.menuOpen = 'false';
             toggle.setAttribute('aria-expanded', 'false');
+            closeDropdowns();
         };
 
         const openMenu = () => {
             header.dataset.menuOpen = 'true';
             toggle.setAttribute('aria-expanded', 'true');
             if (document.activeElement === toggle) {
-                const firstLink = navList.querySelector('a');
-                firstLink?.focus();
+                navRoot.querySelector('a')?.focus();
             }
         };
 
@@ -416,7 +538,7 @@
             }
         });
 
-        navList.addEventListener('click', (event) => {
+        navRoot.addEventListener('click', (event) => {
             const link = event.target instanceof HTMLElement ? event.target.closest('a') : null;
             if (link) {
                 closeMenu();
@@ -443,6 +565,7 @@
             mediaQuery.addListener(handleMediaChange);
         }
     }
+
 
     function initSearch() {
         const form = document.querySelector('[data-search-form]:not([data-demo-disabled])');
@@ -1090,6 +1213,9 @@
         });
     }
     document.addEventListener('DOMContentLoaded', () => {
+        highlightActiveNavLink();
+        initStickyHeader();
+        initNavDropdowns();
         initMobileNav();
         initDemoMode();
         initSearch();
@@ -1098,3 +1224,5 @@
         initServiceDemo();
     });
 })();
+
+
