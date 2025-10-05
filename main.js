@@ -424,6 +424,114 @@
             return;
         }
 
+        const dropButtons = header.querySelectorAll('.primary-nav .dropdown > .dropbtn');
+        if (dropButtons.length > 0) {
+            const dropdowns = Array.from(dropButtons, (button) => button.parentElement);
+
+            const closeDropdown = (dropdown) => {
+                const trigger = dropdown?.querySelector('.dropbtn');
+                if (!trigger) {
+                    return;
+                }
+                trigger.setAttribute('aria-expanded', 'false');
+                dropdown.classList.remove('is-open');
+            };
+
+            const openDropdown = (dropdown) => {
+                const trigger = dropdown?.querySelector('.dropbtn');
+                if (!trigger) {
+                    return;
+                }
+                trigger.setAttribute('aria-expanded', 'true');
+                dropdown.classList.add('is-open');
+            };
+
+            const closeAll = (except) => {
+                dropdowns.forEach((dropdown) => {
+                    if (except && dropdown === except) {
+                        return;
+                    }
+                    closeDropdown(dropdown);
+                });
+            };
+
+            const desktopQuery = window.matchMedia('(min-width: 961px)');
+
+            dropButtons.forEach((button) => {
+                const dropdown = button.parentElement;
+                button.setAttribute('aria-haspopup', 'true');
+                button.setAttribute('aria-expanded', button.getAttribute('aria-expanded') || 'false');
+                button.setAttribute('role', 'button');
+
+                button.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const isOpen = dropdown.classList.contains('is-open');
+                    if (isOpen) {
+                        closeDropdown(dropdown);
+                    } else {
+                        closeAll(dropdown);
+                        openDropdown(dropdown);
+                    }
+                });
+
+                button.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        const isOpen = dropdown.classList.contains('is-open');
+                        if (isOpen) {
+                            closeDropdown(dropdown);
+                        } else {
+                            closeAll(dropdown);
+                            openDropdown(dropdown);
+                        }
+                    } else if (event.key === 'Escape') {
+                        closeDropdown(dropdown);
+                        button.focus();
+                    }
+                });
+
+                dropdown.addEventListener('mouseenter', () => {
+                    if (!desktopQuery.matches) {
+                        return;
+                    }
+                    closeAll(dropdown);
+                    openDropdown(dropdown);
+                });
+
+                dropdown.addEventListener('mouseleave', () => {
+                    if (!desktopQuery.matches) {
+                        return;
+                    }
+                    closeDropdown(dropdown);
+                });
+
+                dropdown.addEventListener('focusout', (event) => {
+                    const related = event.relatedTarget;
+                    if (!related || !(related instanceof HTMLElement) || !dropdown.contains(related)) {
+                        closeDropdown(dropdown);
+                    }
+                });
+            });
+
+            document.addEventListener('click', (event) => {
+                const target = event.target;
+                if (!(target instanceof HTMLElement)) {
+                    return;
+                }
+                if (!header.contains(target)) {
+                    closeAll();
+                }
+            });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape') {
+                    closeAll();
+                }
+            });
+
+            return;
+        }
+
         const toggles = header.querySelectorAll('[data-nav-toggle]');
         if (!toggles.length) {
             return;
@@ -488,8 +596,6 @@
             }
         });
     }
-
-
 
     function initMobileNav() {
         const header = document.querySelector('header');
@@ -565,7 +671,6 @@
             mediaQuery.addListener(handleMediaChange);
         }
     }
-
 
     function initSearch() {
         const form = document.querySelector('[data-search-form]:not([data-demo-disabled])');
@@ -1224,5 +1329,3 @@
         initServiceDemo();
     });
 })();
-
-
