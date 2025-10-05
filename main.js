@@ -377,6 +377,73 @@
         }
     ];
 
+    function initMobileNav() {
+        const header = document.querySelector('header');
+        if (!header) {
+            return;
+        }
+
+        const toggle = header.querySelector('.menu-toggle');
+        const navList = header.querySelector('nav ul');
+
+        if (!toggle || !navList) {
+            return;
+        }
+
+        const closeMenu = () => {
+            header.dataset.menuOpen = 'false';
+            toggle.setAttribute('aria-expanded', 'false');
+        };
+
+        const openMenu = () => {
+            header.dataset.menuOpen = 'true';
+            toggle.setAttribute('aria-expanded', 'true');
+            if (document.activeElement === toggle) {
+                const firstLink = navList.querySelector('a');
+                firstLink?.focus();
+            }
+        };
+
+        header.dataset.menuOpen = header.dataset.menuOpen || 'false';
+        toggle.setAttribute('aria-expanded', toggle.getAttribute('aria-expanded') || 'false');
+
+        toggle.addEventListener('click', () => {
+            const isOpen = header.dataset.menuOpen === 'true';
+            if (isOpen) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+
+        navList.addEventListener('click', (event) => {
+            const link = event.target instanceof HTMLElement ? event.target.closest('a') : null;
+            if (link) {
+                closeMenu();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && header.dataset.menuOpen === 'true') {
+                closeMenu();
+                toggle.focus();
+            }
+        });
+
+        const mediaQuery = window.matchMedia('(min-width: 961px)');
+        const handleMediaChange = (event) => {
+            if (event.matches) {
+                closeMenu();
+            }
+        };
+
+        if (typeof mediaQuery.addEventListener === 'function') {
+            mediaQuery.addEventListener('change', handleMediaChange);
+        } else if (typeof mediaQuery.addListener === 'function') {
+            mediaQuery.addListener(handleMediaChange);
+        }
+    }
+
     function initSearch() {
         const form = document.querySelector('[data-search-form]:not([data-demo-disabled])');
         if (!form) return;
@@ -1023,6 +1090,7 @@
         });
     }
     document.addEventListener('DOMContentLoaded', () => {
+        initMobileNav();
         initDemoMode();
         initSearch();
         initExpandables();

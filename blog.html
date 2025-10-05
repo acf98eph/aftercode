@@ -2,18 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aftercode | Blog</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://fonts.googleapis.com/css2&ndash;family=Audiowide&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aftercode | Blog</title>
+    <meta name="description" content="Read Aftercode dispatches covering design, development, and automation experiments from the demo studio." />
+    <meta name="keywords" content="Aftercode blog, product updates, automation tips, design dispatch, neon blog" />
+    <meta name="author" content="Aftercode" />
+    <meta name="theme-color" content="#0d1117" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:site_name" content="Aftercode" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Aftercode | Blog" />
+    <meta property="og:description" content="Read Aftercode dispatches covering design, development, and automation experiments from the demo studio." />
+    <meta property="og:image" content="assets/social-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://aftercode.dev/blog.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aftercode | Blog" />
+    <meta name="twitter:description" content="Read Aftercode dispatches covering design, development, and automation experiments from the demo studio." />
+    <meta name="twitter:image" content="assets/social-card.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/favicon.svg">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="demo-banner" role="status">Aftercode is in Demo Mode - Preview Only</div>
+        <div class="demo-banner" role="status">Aftercode is in Demo Mode — Preview Only</div>
     <header>
         <div class="brand">Aftercode</div>
-        <nav aria-label="Main Navigation">
-            <ul>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+            <span class="visually-hidden">Toggle navigation</span>
+            <span class="menu-toggle__bars" aria-hidden="true"></span>
+        </button>
+        <nav aria-label="Main navigation">
+            <ul id="primary-navigation">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="process.html">Process</a></li>
                 <li><a href="services.html">Services</a></li>
